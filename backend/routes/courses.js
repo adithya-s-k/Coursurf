@@ -65,16 +65,16 @@ router.get('/courses', async (req, res) => {
   }
 });
 
-const insertMovies = async () => {
-  try {
-    const docs = await Courses.insertMany(courses);
-    return Promise.resolve(docs);
-  } catch (err) {
-    return Promise.reject(err);
-  }
-};
-insertMovies()
-  .then((docs) => console.log(docs))
-  .catch((err) => console.log(err));
+// const insertMovies = async () => {
+//   try {
+//     const docs = await Courses.insertMany(courses);
+//     return Promise.resolve(docs);
+//   } catch (err) {
+//     return Promise.reject(err);
+//   }
+// };
+// insertMovies()
+//   .then((docs) => console.log(docs))
+//   .catch((err) => console.log(err));
 
 module.exports = router;
