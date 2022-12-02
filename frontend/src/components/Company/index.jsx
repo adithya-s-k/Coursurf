@@ -15,7 +15,7 @@ const Website = ({ company, filterCompany, setFilterCompany }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Filter By Company</h1>
+      <h1 className={styles.heading}>Company</h1>
       <div className={styles.genre_container}>
         {company.map((company) => (
           <div className={styles.website} key={company}>

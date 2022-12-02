@@ -11,6 +11,7 @@ import Search from './components/Search';
 import Website from './components/Website';
 import Company from './components/Company';
 import Certificate from './components/Certificate';
+import NavigationBar from './components/Navbar';
 
 const base_url = process.env.REACT_APP_API_URL;
 
@@ -42,13 +43,14 @@ function App() {
   return (
     <div className="wrapper">
       <div className="container">
-        <div className="head">
+        <NavigationBar setSearch={(search) => setSearch(search)} />
+        {/* <div className="head">
           <img src="./images/logo.png" alt="logo" className="logo" />
           <Search setSearch={(search) => setSearch(search)} />
-        </div>
+        </div> */}
+        <Sort sort={sort} setSort={(sort) => setSort(sort)} />
         <div className="body">
           <div className="filter_container">
-            <Sort sort={sort} setSort={(sort) => setSort(sort)} />
             <Website
               filterWebsite={filterWebsite}
               website={obj.website ? obj.website : []}

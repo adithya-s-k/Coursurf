@@ -6,6 +6,10 @@
   justify-content: space-between;
 }
 
+h3 {
+  text-align: center;
+}
+
 .logo {
   width: 100px;
   object-fit: contain;
@@ -23,5 +27,5 @@
 }
 
 .filter_container {
-  flex: 1;
+  flex: 1.5;
 }

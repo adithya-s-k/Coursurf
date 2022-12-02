@@ -38,7 +38,7 @@
 .course {
   display: flex;
   align-items: center;
-  height: 70px;
+  height: 100px;
   margin: 5px 10px;
   box-shadow: var(--box-shadow);
   cursor: pointer;
@@ -65,21 +65,10 @@
   margin: 0 10px;
 }
 
-.movie_title {
+.course_title {
   font-size: 16px;
   font-weight: 500;
-}
-
-.genre_container {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.movie_genre {
-  font-size: 16px;
-  font-weight: 400;
+  padding-left: 20px;
 }
 
 .rating_container {

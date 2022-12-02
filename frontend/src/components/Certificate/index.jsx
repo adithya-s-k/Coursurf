@@ -19,7 +19,7 @@ const Certificate = ({
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.heading}>Filter By Certification</h1>
+      <h1 className={styles.heading}>Certification</h1>
       <div className={styles.genre_container}>
         {certificate.map((Certificate) => (
           <div className={styles.website} key={Certificate}>

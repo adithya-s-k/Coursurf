@@ -13,16 +13,8 @@ const Table = ({ courses }) => {
       {courses.map((course) => (
         <div className={styles.course} key={course._id}>
           <div className={styles.title_container}>
-            <p className={styles.movie_title}>{course.name}</p>
+            <p className={styles.course_title}>{course.name}</p>
           </div>
-          {/* <div className={styles.genre_container}>
-            {course.genre.map((genre, index) => (
-              <p key={genre} className={styles.movie_genre}>
-                {genre}
-                {index !== course.genre.length - 1 && '/'}
-              </p>
-            ))}
-          </div> */}
           <div className={styles.rating_container}>
             <img
               src="./images/star.png"
