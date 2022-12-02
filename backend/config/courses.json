@@ -28,73 +28,58 @@
     "rating": "8.9"
   },
   {
-    "name": "Forrest Gump",
-    "img": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX674_.jpg",
-    "year": "1994",
-    "genre": ["Drama", "Romance"],
-    "rating": "8.8"
+    "name": "The Web Developer Bootcamp 2022",
+    "price": "3,499",
+    "website": ["Udemy"],
+    "company": ["Google"],
+    "certificate": ["Paid Certification"],
+    "rating": "4.7",
+    "hours": "30.5",
+    "video": "https://mp4-b.udemycdn.com/2021-11-18_18-22-15-96fe3656720dc101aa373281f251197d/2/WebHD_720p.mp4?secure=jMk7sQItBm6tafPeH7IXKw%3D%3D%2C1669961157",
+    "link": "https://www.udemy.com/course/the-web-developer-bootcamp/"
   },
   {
-    "name": "Fight Club",
-    "img": "https://m.media-amazon.com/images/M/MV5BNDIzNDU0YzEtYzE5Ni00ZjlkLTk5ZjgtNjM3NWE4YzA3Nzk3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX674_.jpg",
-    "year": "1999",
-    "genre": ["Drama", "Thriller"],
-    "rating": "8.8"
+    "name": "The Complete JavaScript Course 2023: From Zero to Expert",
+    "price": "3,499",
+    "website": ["Udemy"],
+    "company": [],
+    "certificate": ["Paid Certification"],
+    "rating": "4.7",
+    "hours": "69",
+    "video": "https://mp4-b.udemycdn.com/2021-11-18_18-22-15-96fe3656720dc101aa373281f251197d/2/WebHD_720p.mp4?secure=jMk7sQItBm6tafPeH7IXKw%3D%3D%2C1669961157",
+    "link": "https://www.udemy.com/course/the-complete-javascript-course/"
   },
   {
-    "name": "The Matrix",
-    "img": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_FMjpg_UX674_.jpg",
-    "year": "1999",
-    "genre": ["Sci-fi", "Action"],
-    "rating": "8.7"
+    "name": "Build Responsive Real-World Websites with HTML and CSS",
+    "price": "3,499",
+    "website": ["Udemy"],
+    "company": [],
+    "certificate": ["Paid Certification"],
+    "rating": "4.8",
+    "hours": "37.5",
+    "video": "https://mp4-b.udemycdn.com/2021-11-18_18-22-15-96fe3656720dc101aa373281f251197d/2/WebHD_720p.mp4?secure=jMk7sQItBm6tafPeH7IXKw%3D%3D%2C1669961157",
+    "link": "https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/"
   },
   {
-    "name": "Goodfellas",
-    "img": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX674_.jpg",
-    "year": "1990",
-    "genre": ["Drama", "Crime"],
-    "rating": "8.7"
-  },
-  {
-    "name": "Interstellar",
-    "img": "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX674_.jpg",
-    "year": "2014",
-    "genre": ["Sci-fi", "Adventure"],
-    "rating": "8.6"
-  },
-  {
-    "name": "Whiplash",
-    "img": "https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX674_.jpg",
-    "year": "2014",
-    "genre": ["Drama", "Music"],
-    "rating": "8.5"
-  },
-  {
-    "name": "Parasite",
-    "img": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX674_.jpg",
-    "year": "2019",
-    "genre": ["Thriller", "Drama"],
-    "rating": "8.5"
-  },
-  {
-    "name": "Spider-Man: Into the Spider-Verse",
-    "img": "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_FMjpg_UX674_.jpg",
-    "year": "2018",
-    "genre": ["Family", "Action"],
-    "rating": "8.3"
-  },
-  {
-    "name": "Coco",
-    "img": "https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_FMjpg_UX674_.jpg",
-    "year": "2017",
-    "genre": ["Family", "Adventure"],
-    "rating": "8.3"
-  },
-  {
-    "name": "Your Name",
-    "img": "https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_FMjpg_UX674_.jpg",
-    "year": "2016",
-    "genre": ["Romance", "Fantasy"],
-    "rating": "8.3"
+    "name": "Node JS API Development for Beginners",
+    "price": "0",
+    "website": ["Udemy"],
+    "company": [],
+    "certificate": ["Free Certification"],
+    "rating": "4.4",
+    "hours": "2.5",
+    "video": "https://mp4-c.udemycdn.com/2019-02-16_10-11-56-ae207bf4854fee7967a0a14ad5abfd10/WebHD_720p.mp4?Expires=1669966817&Signature=lcMGw-HLjl35SsMVJeRNx4sNreK6PB33UrgkawiqHaXqd7w6K29VqPAdyQJvZwriMavwyLk0LEHCnYFip-~0bhvL6EalpJJsBaEFGC7bvx4On9gwuE6zN-L~LnFpZ6Vi8nu1heWWnMNUoUBs6dEe5cIYp~IooTb-IaWjli2NLQ5g6WHBFa3cgz~1-RJlX1tVlBRw3YLLbaQ8FLGLocUcyf61DtbKYdtXUeP6z4R3lDEy97EMQh4R4flj6IMOxR-J~xKi6em3xKEKcgmS3XppgZAqnQsUNzk2jqXr949PHZiW9gxM4nLPSHm~ZbJphejGUdBVY-Pb9v8TM~eHOkXgxA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
+    "link": "https://www.udemy.com/course/node-js-api-tutorial/"
   }
+  {
+    "name": "Web Development",
+    "price": "0",
+    "website": ["Shaw Academy"],
+    "company": [],
+    "certificate": ["Free Certification"],
+    "rating": "4.0",
+    "hours": "100",
+    "video": "https://mp4-b.udemycdn.com/2021-11-18_18-22-15-96fe3656720dc101aa373281f251197d/2/WebHD_720p.mp4?secure=jMk7sQItBm6tafPeH7IXKw%3D%3D%2C1669961157",
+    "link": "https://www.shawacademy.com/app/en/courses/"
+  },
 ]
