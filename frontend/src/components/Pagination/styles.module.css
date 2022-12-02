@@ -30,6 +30,6 @@
 }
 
 .active {
-  background-color: var(--blue);
+  background-color: #f96945;
   color: white;
 }

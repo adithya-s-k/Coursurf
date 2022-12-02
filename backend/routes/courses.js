@@ -5,7 +5,7 @@ const courses = require('../config/courses.json');
 router.get('/courses', async (req, res) => {
   try {
     const page = parseInt(req.query.page) - 1 || 0;
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = parseInt(req.query.limit) || 5;
     const search = req.query.search || '';
     let sort = req.query.sort || 'rating';
     let website = req.query.website || 'All';

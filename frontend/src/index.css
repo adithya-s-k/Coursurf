@@ -4,7 +4,7 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   color: var(--black);
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
 :root {
