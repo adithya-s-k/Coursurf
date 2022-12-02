@@ -1,33 +1,5 @@
 [
   {
-    "name": "The Shawshank Redemption",
-    "img": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_FMjpg_UX674_.jpg",
-    "year": "1994",
-    "genre": ["Drama", "Crime"],
-    "rating": "9.2"
-  },
-  {
-    "name": "The Godfather",
-    "img": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX674_.jpg",
-    "year": "1972",
-    "genre": ["Drama", "Crime"],
-    "rating": "9.2"
-  },
-  {
-    "name": "The Dark Knight",
-    "img": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UX674_.jpg",
-    "year": "2008",
-    "genre": ["Action", "Adventure"],
-    "rating": "9.0"
-  },
-  {
-    "name": "Pulp Fiction",
-    "img": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX674_.jpg",
-    "year": "1994",
-    "genre": ["Drama", "Crime"],
-    "rating": "8.9"
-  },
-  {
     "name": "The Web Developer Bootcamp 2022",
     "price": "3499",
     "website": ["Udemy"],

@@ -6,18 +6,18 @@ import './App.css';
 
 import Table from './components/Table';
 import Sort from './components/Sort';
-import Genre from './components/Genre';
 import Pagination from './components/Pagination';
 import Search from './components/Search';
 import Website from './components/Website';
+import Company from './components/Company';
 
 const base_url = process.env.REACT_APP_API_URL;
 
 function App() {
   const [obj, setObj] = useState({});
   const [sort, setSort] = useState({ sort: 'rating', order: 'desc' });
-  const [filterGenre, setFilterGenre] = useState([]);
   const [filterWebsite, setFilterWebsite] = useState([]);
+  const [filterCompany, setFilterCompany] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
 
@@ -26,7 +26,7 @@ function App() {
       try {
         const url = `${base_url}?page=${page}&sort=${sort.sort},${
           sort.order
-        }&genre=${filterGenre.toString()}&website=${filterWebsite.toString()}&search=${search}`;
+        }&website=${filterWebsite.toString()}&company=${filterCompany.toString()}&search=${search}`;
         const { data } = await axios.get(url);
         setObj(data);
         console.log(data);
@@ -35,7 +35,7 @@ function App() {
       }
     };
     getAllMovies();
-  }, [sort, filterGenre, filterWebsite, page, search]);
+  }, [sort, filterWebsite, filterCompany, page, search]);
 
   return (
     <div className="wrapper">
@@ -48,14 +48,14 @@ function App() {
           <div className="filter_container">
             <Sort sort={sort} setSort={(sort) => setSort(sort)} />
             <Website
-              filterWebsite={filterGenre}
+              filterWebsite={filterWebsite}
               website={obj.website ? obj.website : []}
               setFilterWebsite={(website) => setFilterWebsite(website)}
             />
-            <Genre
-              filterGenre={filterGenre}
-              genres={obj.genres ? obj.genres : []}
-              setFilterGenre={(genre) => setFilterGenre(genre)}
+            <Company
+              filterCompany={filterCompany}
+              company={obj.company ? obj.company : []}
+              setFilterCompany={(company) => setFilterCompany(company)}
             />
           </div>
           <div className="table_container">
