@@ -9,6 +9,7 @@ import Sort from './components/Sort';
 import Genre from './components/Genre';
 import Pagination from './components/Pagination';
 import Search from './components/Search';
+import Website from './components/Website';
 
 const base_url = process.env.REACT_APP_API_URL;
 
@@ -16,6 +17,7 @@ function App() {
   const [obj, setObj] = useState({});
   const [sort, setSort] = useState({ sort: 'rating', order: 'desc' });
   const [filterGenre, setFilterGenre] = useState([]);
+  const [filterWebsite, setFilterWebsite] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
 
@@ -24,7 +26,7 @@ function App() {
       try {
         const url = `${base_url}?page=${page}&sort=${sort.sort},${
           sort.order
-        }&genre=${filterGenre.toString()}&search=${search}`;
+        }&genre=${filterGenre.toString()}&website=${filterWebsite.toString()}&search=${search}`;
         const { data } = await axios.get(url);
         setObj(data);
         console.log(data);
@@ -33,7 +35,7 @@ function App() {
       }
     };
     getAllMovies();
-  }, [sort, filterGenre, page, search]);
+  }, [sort, filterGenre, filterWebsite, page, search]);
 
   return (
     <div className="wrapper">
@@ -43,6 +45,19 @@ function App() {
           <Search setSearch={(search) => setSearch(search)} />
         </div>
         <div className="body">
+          <div className="filter_container">
+            <Sort sort={sort} setSort={(sort) => setSort(sort)} />
+            <Website
+              filterWebsite={filterGenre}
+              website={obj.website ? obj.website : []}
+              setFilterWebsite={(website) => setFilterWebsite(website)}
+            />
+            <Genre
+              filterGenre={filterGenre}
+              genres={obj.genres ? obj.genres : []}
+              setFilterGenre={(genre) => setFilterGenre(genre)}
+            />
+          </div>
           <div className="table_container">
             <Table courses={obj.courses ? obj.courses : []} />
             <Pagination
@@ -50,14 +65,6 @@ function App() {
               limit={obj.limit ? obj.limit : 0}
               total={obj.total ? obj.total : 0}
               setPage={(page) => setPage(page)}
-            />
-          </div>
-          <div className="filter_container">
-            <Sort sort={sort} setSort={(sort) => setSort(sort)} />
-            <Genre
-              filterGenre={filterGenre}
-              genres={obj.genres ? obj.genres : []}
-              setFilterGenre={(genre) => setFilterGenre(genre)}
             />
           </div>
         </div>

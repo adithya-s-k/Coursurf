@@ -9,6 +9,7 @@ router.get('/courses', async (req, res) => {
     const search = req.query.search || '';
     let sort = req.query.sort || 'rating';
     let genre = req.query.genre || 'All';
+    let website = req.query.website || 'All';
 
     const genreOptions = [
       'Action',
@@ -22,10 +23,26 @@ router.get('/courses', async (req, res) => {
       'Music',
       'Family',
     ];
+    const websiteOptions = [
+      'Udemy',
+      'Coursera',
+      'Edx',
+      'Simplilearn',
+      'Shaw Academy',
+    ];
+
+    const companyOptions = ['Google', 'Microsoft', 'IBM', 'Facebook', 'Amazon'];
+
+    const certificateOptions = ['Free Certification', 'Paid Certification'];
 
     genre === 'All'
       ? (genre = [...genreOptions])
       : (genre = req.query.genre.split(','));
+    req.query.sort ? (sort = req.query.sort.split(',')) : (sort = [sort]);
+
+    website === 'All'
+      ? (website = [...websiteOptions])
+      : (website = req.query.website.split(','));
     req.query.sort ? (sort = req.query.sort.split(',')) : (sort = [sort]);
 
     let sortBy = {};
@@ -38,14 +55,14 @@ router.get('/courses', async (req, res) => {
     const courses = await Courses.find({
       name: { $regex: search, $options: 'i' },
     })
-      .where('genre')
-      .in([...genre])
+      .where('website')
+      .in([...website])
       .sort(sortBy)
       .skip(page * limit)
       .limit(limit);
 
     const total = await Courses.countDocuments({
-      genre: { $in: [...genre] },
+      website: { $in: [...website] },
       name: { $regex: search, $options: 'i' },
     });
 
@@ -55,6 +72,7 @@ router.get('/courses', async (req, res) => {
       page: page + 1,
       limit,
       genres: genreOptions,
+      website: websiteOptions,
       courses,
     };
 

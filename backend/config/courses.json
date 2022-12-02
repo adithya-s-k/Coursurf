@@ -29,7 +29,7 @@
   },
   {
     "name": "The Web Developer Bootcamp 2022",
-    "price": "3,499",
+    "price": "3499",
     "website": ["Udemy"],
     "company": ["Google"],
     "certificate": ["Paid Certification"],
@@ -40,7 +40,7 @@
   },
   {
     "name": "The Complete JavaScript Course 2023: From Zero to Expert",
-    "price": "3,499",
+    "price": "3499",
     "website": ["Udemy"],
     "company": [],
     "certificate": ["Paid Certification"],
@@ -51,7 +51,7 @@
   },
   {
     "name": "Build Responsive Real-World Websites with HTML and CSS",
-    "price": "3,499",
+    "price": "3499",
     "website": ["Udemy"],
     "company": [],
     "certificate": ["Paid Certification"],
@@ -70,7 +70,7 @@
     "hours": "2.5",
     "video": "https://mp4-c.udemycdn.com/2019-02-16_10-11-56-ae207bf4854fee7967a0a14ad5abfd10/WebHD_720p.mp4?Expires=1669966817&Signature=lcMGw-HLjl35SsMVJeRNx4sNreK6PB33UrgkawiqHaXqd7w6K29VqPAdyQJvZwriMavwyLk0LEHCnYFip-~0bhvL6EalpJJsBaEFGC7bvx4On9gwuE6zN-L~LnFpZ6Vi8nu1heWWnMNUoUBs6dEe5cIYp~IooTb-IaWjli2NLQ5g6WHBFa3cgz~1-RJlX1tVlBRw3YLLbaQ8FLGLocUcyf61DtbKYdtXUeP6z4R3lDEy97EMQh4R4flj6IMOxR-J~xKi6em3xKEKcgmS3XppgZAqnQsUNzk2jqXr949PHZiW9gxM4nLPSHm~ZbJphejGUdBVY-Pb9v8TM~eHOkXgxA__&Key-Pair-Id=APKAITJV77WS5ZT7262A",
     "link": "https://www.udemy.com/course/node-js-api-tutorial/"
-  }
+  },
   {
     "name": "Web Development",
     "price": "0",
@@ -81,5 +81,5 @@
     "hours": "100",
     "video": "https://mp4-b.udemycdn.com/2021-11-18_18-22-15-96fe3656720dc101aa373281f251197d/2/WebHD_720p.mp4?secure=jMk7sQItBm6tafPeH7IXKw%3D%3D%2C1669961157",
     "link": "https://www.shawacademy.com/app/en/courses/"
-  },
+  }
 ]
