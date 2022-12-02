@@ -10,6 +10,7 @@ router.get('/courses', async (req, res) => {
     let sort = req.query.sort || 'rating';
     let website = req.query.website || 'All';
     let company = req.query.company || 'All';
+    let certificate = req.query.certificate || 'All';
 
     const websiteOptions = [
       'Udemy',
@@ -23,33 +24,58 @@ router.get('/courses', async (req, res) => {
 
     const certificateOptions = ['Free Certification', 'Paid Certification'];
 
-    website === 'All'
-      ? (website = [...websiteOptions])
-      : (website = req.query.website.split(','));
     req.query.sort ? (sort = req.query.sort.split(',')) : (sort = [sort]);
-
-    company === 'All'
-      ? (company = [...companyOptions])
-      : (company = req.query.company.split(','));
-    req.query.sort ? (sort = req.query.sort.split(',')) : (sort = [sort]);
-
-    final = [...website, ...company];
-    keyword = 'website' || 'company';
-    if (website.length === 5 && company.length >= 1) {
-      keyword = 'company';
-    }
-    if (company.length === 5 && website.length >= 1) {
-      keyword = 'website';
-    }
-
-    console.log(keyword);
-
     let sortBy = {};
     if (sort[1]) {
       sortBy[sort[0]] = sort[1];
     } else {
       sortBy[sort[0]] = 'asc';
     }
+
+    website === 'All'
+      ? (website = [...websiteOptions])
+      : (website = req.query.website.split(','));
+
+    company === 'All'
+      ? (company = [...companyOptions])
+      : (company = req.query.company.split(','));
+
+    certificate === 'All'
+      ? (certificate = [...certificateOptions])
+      : (certificate = req.query.certificate.split(','));
+
+    final = [...website, ...company, ...certificate];
+
+    if (
+      website.length === 5 &&
+      company.length === 5 &&
+      certificate.length >= 1
+    ) {
+      keyword = 'certificate';
+    }
+    if (
+      company.length === 5 &&
+      website.length >= 1 &&
+      certificate.length === 2
+    ) {
+      keyword = 'website';
+    }
+    if (
+      company.length >= 1 &&
+      website.length === 5 &&
+      certificate.length === 2
+    ) {
+      keyword = 'company';
+    }
+    if (
+      website.length === 5 &&
+      company.length === 5 &&
+      certificate.length == 2
+    ) {
+      keyword = 'website' || 'company' || 'certificate';
+    }
+
+    console.log(keyword);
 
     const courses = await Courses.find({
       name: { $regex: search, $options: 'i' },
@@ -74,6 +100,7 @@ router.get('/courses', async (req, res) => {
       limit,
       website: websiteOptions,
       company: companyOptions,
+      certificate: certificateOptions,
       courses,
     };
 

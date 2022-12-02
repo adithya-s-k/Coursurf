@@ -10,6 +10,7 @@ import Pagination from './components/Pagination';
 import Search from './components/Search';
 import Website from './components/Website';
 import Company from './components/Company';
+import Certificate from './components/Certificate';
 
 const base_url = process.env.REACT_APP_API_URL;
 
@@ -18,15 +19,16 @@ function App() {
   const [sort, setSort] = useState({ sort: 'rating', order: 'desc' });
   const [filterWebsite, setFilterWebsite] = useState([]);
   const [filterCompany, setFilterCompany] = useState([]);
+  const [filterCertificate, setFilterCertificate] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    const getAllMovies = async () => {
+    const getAllCourses = async () => {
       try {
         const url = `${base_url}?page=${page}&sort=${sort.sort},${
           sort.order
-        }&website=${filterWebsite.toString()}&company=${filterCompany.toString()}&search=${search}`;
+        }&website=${filterWebsite.toString()}&company=${filterCompany.toString()}&certificate=${filterCertificate.toString()}&search=${search}`;
         const { data } = await axios.get(url);
         setObj(data);
         console.log(data);
@@ -34,8 +36,8 @@ function App() {
         console.log(err);
       }
     };
-    getAllMovies();
-  }, [sort, filterWebsite, filterCompany, page, search]);
+    getAllCourses();
+  }, [sort, filterWebsite, filterCompany, filterCertificate, page, search]);
 
   return (
     <div className="wrapper">
@@ -56,6 +58,13 @@ function App() {
               filterCompany={filterCompany}
               company={obj.company ? obj.company : []}
               setFilterCompany={(company) => setFilterCompany(company)}
+            />
+            <Certificate
+              filterCertificate={filterCertificate}
+              certificate={obj.certificate ? obj.certificate : []}
+              setFilterCertificate={(certificate) =>
+                setFilterCertificate(certificate)
+              }
             />
           </div>
           <div className="table_container">

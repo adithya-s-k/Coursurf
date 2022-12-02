@@ -16,11 +16,11 @@
 
 .genre_container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
-.genre {
+.website {
   min-width: 90px;
   display: flex;
   align-items: center;
