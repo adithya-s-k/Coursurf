@@ -7,19 +7,6 @@
   border-radius: 4px;
 }
 
-.heading {
-  margin: 0;
-  font-size: 16px;
-  margin: 10px;
-  text-align: center;
-}
-
-.genre_container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
 .website {
   min-width: 90px;
   display: flex;
@@ -27,7 +14,27 @@
   margin: 2px 0;
 }
 
+.genre_container {
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px;
+}
+
 .genre_label {
   margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #424242;
   margin-left: 5px;
+}
+.genre_input {
+  accent-color: #f34543;
 }

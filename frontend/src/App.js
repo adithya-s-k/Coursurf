@@ -7,7 +7,6 @@ import './App.css';
 import Table from './components/Table';
 import Sort from './components/Sort';
 import Pagination from './components/Pagination';
-import Search from './components/Search';
 import Website from './components/Website';
 import Company from './components/Company';
 import Certificate from './components/Certificate';
@@ -44,11 +43,8 @@ function App() {
     <div className="wrapper">
       <div className="container">
         <NavigationBar setSearch={(search) => setSearch(search)} />
-        {/* <div className="head">
-          <img src="./images/logo.png" alt="logo" className="logo" />
-          <Search setSearch={(search) => setSearch(search)} />
-        </div> */}
-        <Sort sort={sort} setSort={(sort) => setSort(sort)} />
+
+        <Sort total={obj.total} sort={sort} setSort={(sort) => setSort(sort)} />
         <div className="body">
           <div className="filter_container">
             <Website

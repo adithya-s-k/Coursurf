@@ -7,7 +7,7 @@ const Search = ({ setSearch }) => {
     <input
       type="text"
       className={styles.search}
-      placeholder="Search"
+      placeholder="What do you want to learn?"
       onChange={({ currentTarget: input }) => setSearch(input.value)}
     />
   );

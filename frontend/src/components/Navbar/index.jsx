@@ -5,15 +5,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from './styles.module.css';
 
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Search from '../Search';
 
 const NavigationBar = ({ setSearch }) => {
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Container fluid>
+      <Navbar className={styles.navbar} expand="lg">
+        <Container className={styles.navbarContainer} fluid>
           <Navbar.Brand>
             <img
               className={styles.logo_image}
@@ -26,15 +26,7 @@ const NavigationBar = ({ setSearch }) => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           ></Nav>
-          <Form className="d-flex w">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-              onChange={({ currentTarget: input }) => setSearch(input.value)}
-            />
-          </Form>
+          <Search setSearch={(search) => setSearch(search)} />
         </Container>
       </Navbar>
     </>

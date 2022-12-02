@@ -11,7 +11,7 @@
   margin: 0;
   font-size: 16px;
   margin: 10px;
-  text-align: center;
+  margin: 5px;
 }
 
 .genre_container {
@@ -30,4 +30,24 @@
 .genre_label {
   margin: 0;
   margin-left: 5px;
+}
+.genre_input {
+  accent-color: #f34543;
+}
+.heading {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 5px;
+}
+
+.genre_label {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #424242;
+  margin-left: 5px;
+}
+.genre_input {
+  accent-color: #f34543;
 }

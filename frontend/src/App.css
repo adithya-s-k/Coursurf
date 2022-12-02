@@ -1,23 +1,5 @@
-.head {
-  display: flex;
-  align-content: center;
-  height: 80px;
-  background-color: black;
-  justify-content: space-between;
-}
-
-h3 {
-  text-align: center;
-}
-
-.logo {
-  width: 100px;
-  object-fit: contain;
-  margin-left: 15px;
-}
-
 .body {
-  height: 500px;
+  height: 100vh;
   display: flex;
 }
 
