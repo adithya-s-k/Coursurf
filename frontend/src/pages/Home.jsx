@@ -1,10 +1,10 @@
 import React from 'react';
 
-import image1 from './assets/img/heroImage.png';
-import image2 from './assets/img/logo.png';
-import image3 from './assets/img/heroBackground.png';
-import image4 from './assets/img/content.png';
-import reactangle from './assets/img/navbar.png';
+import heroImage from './assets/img/heroImage.png';
+import logo from './assets/img/logo.png';
+import heroBackground from './assets/img/heroBackground.png';
+import content from './assets/img/content.png';
+import navBackground from './assets/img/navbar.png';
 
 export default function home() {
   return (
@@ -19,7 +19,7 @@ export default function home() {
             height: '2380.24',
             marginTop: 412,
           }}
-          src={image4}
+          src={content}
         />
         <img
           alt="image101"
@@ -29,7 +29,7 @@ export default function home() {
             width: '100%',
             height: 800,
           }}
-          src={image3}
+          src={heroBackground}
         />
         <img
           alt="image101"
@@ -39,7 +39,7 @@ export default function home() {
             width: '100%',
             height: 150,
           }}
-          src={reactangle}
+          src={navBackground}
         />
       </div>
 
@@ -51,9 +51,9 @@ export default function home() {
           <img
             alt="."
             style={{ width: 60, height: 60, margin: 14 }}
-            src={image2}
+            src={logo}
           />
-          <a className="navbar-brand d-flex align-items-center" href="hello">
+          <a className="navbar-brand d-flex align-items-center" href="/">
             <span
               style={{
                 fontSize: 54,
@@ -102,7 +102,7 @@ export default function home() {
               >
                 <a
                   className="nav-link"
-                  href="hello"
+                  href="/search"
                   style={{
                     fontSize: 30,
                     fontFamily: 'Almarai, sans-serif',
@@ -111,7 +111,7 @@ export default function home() {
                     margin: 8,
                   }}
                 >
-                  About Us
+                  Search
                 </a>
               </li>
             </ul>
@@ -136,7 +136,7 @@ export default function home() {
             width={562}
             height={435}
             style={{ width: 570, height: 435, margin: 0 }}
-            src={image1}
+            src={heroImage}
           />
           <div
             className="d-lg-flex flex-column justify-content-lg-center"
@@ -149,7 +149,7 @@ export default function home() {
           >
             <img
               alt="image101"
-              src={image2}
+              src={logo}
               style={{ width: 80, margin: 0, marginBottom: 10 }}
             />
             <h1
