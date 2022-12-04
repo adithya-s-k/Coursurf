@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Courses = require('../models/Courses');
+const Courses = require('../models/courses');
 const courses = require('../config/courses.json');
 
 router.get('/courses', async (req, res) => {

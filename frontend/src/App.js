@@ -13,6 +13,7 @@ import Certificate from './components/Certificate';
 import NavigationBar from './components/Navbar';
 
 const base_url = process.env.REACT_APP_API_URL;
+// const server_url = 'https://coursurf-api.onrender.com/api/courses';
 
 function App() {
   const [obj, setObj] = useState({});
