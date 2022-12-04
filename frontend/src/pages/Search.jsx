@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-import Table from './components/Table';
-import Sort from './components/Sort';
-import Pagination from './components/Pagination';
-import Website from './components/Website';
-import Company from './components/Company';
-import Certificate from './components/Certificate';
-import NavigationBar from './components/Navbar';
+import Table from '../components/Table';
+import Sort from '../components/Sort';
+import Pagination from '../components/Pagination';
+import Website from '../components/Website';
+import Company from '../components/Company';
+import Certificate from '../components/Certificate';
+import NavigationBar from '../components/Navbar';
 
 const base_url = process.env.REACT_APP_API_URL;
 // const server_url = 'https://coursurf-api.onrender.com/api/courses';
