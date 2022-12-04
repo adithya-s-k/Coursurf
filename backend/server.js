@@ -8,9 +8,14 @@ const app = express();
 dbConnect();
 
 app.use(express.json());
-app.use(cors());
+-app.use(express.urlencoded({ extended: false }));
+app.use(
+  cors({
+    origin: ['http://localhost:8080', 'https://coursurf.onrender.com'],
+  })
+);
 
 app.use('/api', coursesRoute);
 
-const port = process.env.PORT || 8080;
+const port = 8080;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

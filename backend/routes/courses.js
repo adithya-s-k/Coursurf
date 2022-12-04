@@ -75,7 +75,7 @@ router.get('/courses', async (req, res) => {
       keyword = 'website' || 'company' || 'certificate';
     }
 
-    console.log(keyword);
+    // console.log(keyword);
 
     const courses = await Courses.find({
       name: { $regex: search, $options: 'i' },
@@ -86,7 +86,7 @@ router.get('/courses', async (req, res) => {
       .skip(page * limit)
       .limit(limit);
 
-    console.log(final);
+    // console.log(final);
 
     const total = await Courses.countDocuments({
       website: { $in: final },
