@@ -11,7 +11,7 @@ app.use(express.json());
 -app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: ['http://localhost:8080', 'https://coursurf.onrender.com'],
+    origin: ['http://localhost:8080', 'https://coursurf-api.onrender.com'],
   })
 );
 
