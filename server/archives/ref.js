@@ -17,6 +17,17 @@ async function start() {
   });
   const page = await browser.newPage();
   await page.goto(final_url, { waitUntil: 'load' });
+  await page.waitForSelector(
+    '[data-click-key="search.search.click.search_card"]>div>div>div>h2'
+  );
+
+  const inner_html = await page.evaluate(
+    () =>
+      document.querySelector(
+        '[data-click-key="search.search.click.search_card"] > div >div >div> h2'
+      )[2].innerHTML
+  );
+  console.log(inner_html);
 
   // await page.type(selectors.searchBox, 'python');
   // await browser.close();
