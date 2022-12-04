@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import Search from './pages/Search';
-import Home from './pages/Home';
 
-import { browserRouter as Router, Route, Switch } from 'react-router-dom';
+import './index.css';
+import App from './pages/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Search />);
+root.render(<App />);

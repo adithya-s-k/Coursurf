@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 
 import axios from 'axios';
-import './App.css';
+import './pages.css';
 
 import Table from '../components/Table';
 import Sort from '../components/Sort';
