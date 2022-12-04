@@ -35,12 +35,12 @@ const Table = ({ courses }) => {
           </div>
           <div className={styles.pricing}> ₹{course.price}</div>
           <div className={styles.rightSection}>
-            <div>
+            <div className={styles.buttonContainer}>
               <button className={styles.button}>View Details</button>
             </div>
           </div>
           <div className={styles.rightSection}>
-            <div>
+            <div className={styles.buttonContainer}>
               <a href={course.link}>
                 <button className={styles.button1}>Go to Course</button>
               </a>

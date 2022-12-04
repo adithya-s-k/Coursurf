@@ -37,7 +37,7 @@
 }
 
 .course_title {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -64,7 +64,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 10px;
-  padding-right: 30px;
+  padding-right: 10px;
   width: 20%;
 }
 
@@ -73,6 +73,8 @@
   font-weight: 750;
   color: #f34b4c;
   width: 10%;
+  margin: 20px;
+  text-align: center;
 }
 
 .button {
@@ -84,7 +86,7 @@
     #f96945 51%,
     #f34b4c 100%
   );
-  margin: 5px;
+  /* margin: 5px; */
   padding: 7px 15px;
   text-align: center;
   transition: 0.5s;
@@ -94,10 +96,11 @@
   display: block;
   border: none;
 }
+
 .button1 {
   font-size: 15px;
   font-weight: 600;
-  margin: 5px;
+  /* margin: px; */
   padding: 7px 15px;
   text-align: center;
   transition: 0.5s;
@@ -106,6 +109,13 @@
   border-radius: 10px;
   display: block;
   border: none;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .button:hover {

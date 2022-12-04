@@ -15,11 +15,13 @@ const NavigationBar = ({ setSearch }) => {
       <Navbar className={styles.navbar} expand="lg">
         <Container className={styles.navbarContainer} fluid>
           <Navbar.Brand>
-            <img
-              className={styles.logo_image}
-              src="./images/logo.png"
-              alt="logo"
-            />
+            <a href="/">
+              <img
+                className={styles.logo_image}
+                src="./images/logo.png"
+                alt="logo"
+              />
+            </a>
           </Navbar.Brand>
           <Nav
             className="me-auto my-2 my-lg-0"

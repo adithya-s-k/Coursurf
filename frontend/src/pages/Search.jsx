@@ -68,13 +68,13 @@ function App() {
           </div>
           <div className="table_container">
             <Table courses={obj.courses ? obj.courses : []} />
-            <Pagination
-              page={page}
-              limit={obj.limit ? obj.limit : 0}
-              total={obj.total ? obj.total : 0}
-              setPage={(page) => setPage(page)}
-            />
           </div>
+          <Pagination
+            page={page}
+            limit={obj.limit ? obj.limit : 0}
+            total={obj.total ? obj.total : 0}
+            setPage={(page) => setPage(page)}
+          />
         </div>
       </div>
     </div>

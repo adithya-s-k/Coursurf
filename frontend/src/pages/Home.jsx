@@ -175,7 +175,7 @@ export default function home() {
               <a
                 className="btn btn-primary shadow-lg ms-md-2"
                 role="button"
-                href="/"
+                href="/search"
                 style={{
                   padding: '9px 20px',
                   fontSize: 20,
