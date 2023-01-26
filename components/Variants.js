@@ -13,8 +13,24 @@ export const h1Variants = {
         scale: 1,
         transition: {
             duration: 1,
-            // delay: 0.3,
-            // ease: [0.5, 0.71, 1, 1.5],
+            type: 'spring',
+            stiffness: 500
         }
     },
+}
+
+export const linkVariants = {
+    hidden: {
+        y: 10
+    },
+    visible: {
+        y: 0,
+        transition: {
+            duration: 0.5
+        }
+    },
+    hover: {
+        scale: 1.2,
+        color: '#FD8A45'
+    }
 }
