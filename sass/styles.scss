@@ -6,24 +6,22 @@
     // outline: 0.5px solid yellow;
 }
 
-::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: $dark;
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: $dark;
 }
 
 .navbar {
@@ -32,9 +30,10 @@
     justify-content: space-between;
     padding: 0.8rem 1rem;
     position: sticky;
-    top:0;
+    top: 0;
     background-color: $light;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
     .nav-logo {
         @include flexBox;
 
@@ -53,14 +52,14 @@
                 svg {
                     display: none;
                 }
-                
+
                 p {
                     font-size: 0.8rem;
                     color: rgb(99, 99, 99);
                     font-weight: 500;
                     transition: $transition;
                 }
-                
+
                 transition: $transition;
                 padding: 0.3rem 1.2rem;
                 border-radius: 3px;
@@ -75,7 +74,7 @@
 
     .navbar-links {
         @include flexBox($flexDirection: row, $cGap: 2rem);
-        
+
         .buttons {
             border-radius: 3px;
             cursor: pointer;
@@ -83,11 +82,58 @@
             transition: $transition;
             // background-color: $primary;
             border: 2px solid transparent;
-            
+
             &:hover {
                 color: #333;
                 border: 2px solid $primary;
                 // background-color: rgba(232, 232, 232, 0.718);
+            }
+        }
+
+        .mobile-view {
+            transition: $transition;
+            display: none;
+
+            #switch,
+            #cross {
+                display: none;
+                cursor: pointer;
+            }
+
+            #ham {
+                cursor: pointer;
+            }
+
+            .mobile-links {
+                border-top: 1px solid $primary;
+                height: 50vh;
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 3.84rem;
+                width: 100%;
+                background-color: $light;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                transition: $transition;
+                // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                -webkit-box-shadow: 0 10px 10px -10px #000000;
+                -moz-box-shadow: 0 10px 10px -10px #000000;
+                box-shadow: 0 10px 10px -10px #000000;
+
+                a {
+                    @include flexBox;
+                    padding: 0.3rem 1.2rem;
+                    // background-color: yellow;
+                    margin: 4px;
+                    border: 2px solid transparent;
+                    border-radius: 5px;
+
+                    &:hover {
+                        color: #333;
+                        border: 2px solid $primary;
+                    }
+                }
             }
         }
     }
@@ -106,9 +152,6 @@ footer {
     .footer-left {
         column-span: 1;
         @include flexBox;
-        // background-color: red;
-
-
     }
 
     .footer-right {
@@ -182,8 +225,6 @@ footer {
 // }
 
 @media only screen and (max-width: 1250px) {
-    // .nav {}
-
 
     footer {
         padding: 2rem 4rem;
@@ -213,22 +254,26 @@ footer {
 //  media
 
 @media only screen and (max-width: 660px) {
-    // .nav {}
-.navbar{
-    .nav-logo{
-        .nav-pagelinks{
-            a{
-                p{
-                    display: none;
 
-                }
-                svg{
-                    display: block;
-                }
+    // .nav {}
+    .navbar {
+        .nav-logo {
+            .nav-pagelinks {
+                display: none;
+            }
+        }
+
+        .navbar-links {
+            .buttons {
+                display: none;
+            }
+
+            .mobile-view {
+                display: block;
             }
         }
     }
-}
+
     .footer-right {
         grid-column-end: span 5;
 
