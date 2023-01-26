@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "variables";
+@import "functions";
+
+* {
+    // outline: 1px solid yellow;
+}
+
+.navbar {
+    color: $primary;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    background-color: $dark;
+    // @include font;
+    color: $light;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .footer-left {
+        column-span: 1;
+        @include flexBox;
+        // background-color: red;
+    }
+
+    .footer-right {
+        grid-column-end: span 4;
+
+        .footer-right-top {
+            padding: 1rem;
+
+            h2 {
+                @include font($fontFamily: $fontFooter, $fontSize: 2rem, $py: 0.3);
+                font-weight: 600;
+            }
+
+            p {
+                @include font($fontSize: 0.9rem, $py: 0.5rem);
+                color: rgba(199, 199, 199, 0.487);
+            }
+
+            .links {
+                margin-bottom: 2.5rem;
+                margin-top: 2rem;
+                @include font($fontFamily: $fontFooter, $fontSize: 1rem, $py: 0.5rem);
+                @include flexBox($justifyContent: flex-start, $cGap: 3.5rem);
+                font-weight: bold;
+            }
+        }
+
+        .footer-right-bottom {
+            padding-left: 1rem;
+            .bar {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                align-items: center;
+
+
+                h1 {
+                    @include font($fontFamily: $fontFooter, $fontSize: 1.25rem, $py: 0.5rem);
+                    text-transform: uppercase;
+                    color: $primary;
+                    font-weight: bold;
+                }
+
+                span {
+                    grid-column-end: span 4;
+                    height: 0.3rem;
+                    width: 80%;
+                    border-radius: 10px;
+                    background-color: rgba(199, 199, 199, 0.487);
+                    // padding-right: -50%;
+                }
+            }
+
+            .contact-links {
+                @include flexBox ($justifyContent: flex-start, $cGap:2rem);
+                padding-left: 1rem;
+                padding-top: 0.5rem;
+                .contact-icons {
+
+                    font-size: 1.5rem;
+                    cursor: pointer;
+                    color: rgba(199, 199, 199, 0.487);
+                
+                }
+            }
+        }
+    }
+
+}

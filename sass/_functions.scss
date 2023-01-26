@@ -1,0 +1,33 @@
+@mixin flexBox($flexDirection: row,
+    $justifyContent: center,
+    $alignItems: center,
+    $flexWrap: wrap, 
+    $rGap: 0.2rem,
+    $cGap: 0.2rem) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    flex-wrap: $flexWrap;
+    row-gap: $rGap;
+    column-gap: $cGap;
+}
+
+@mixin css3-prefix($prop, $value) {
+    -webkit-#{$prop}: #{$value};
+    -moz-#{$prop}: #{$value};
+    -ms-#{$prop}: #{$value};
+    -o-#{$prop}: #{$value};
+    #{$prop}: #{$value};
+}
+
+@mixin font($fontSize: 1.2rem, $py: 1rem, $px: 1rem, $fontFamily: 'Poppins'){
+    font-size: $fontSize;
+    padding-top: $py;
+    padding-bottom: $py;
+    padding-right: $px;
+    padding-left: $px;
+    font-family: $fontFamily, sans-serif;
+}
+
+// @include css3-prefix(transform, scale3d(2.5, 2, 1.5));

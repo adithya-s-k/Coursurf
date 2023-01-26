@@ -1,0 +1,40 @@
+import { motion } from 'framer-motion'
+import Image from 'next/image'
+import React from 'react'
+import { BsInstagram } from 'react-icons/bs'
+import { FiMail } from 'react-icons/fi'
+import { h1Variants } from './Variants'
+
+const Footer = () => {
+    return (
+        <footer>
+            <div className='footer-left'>
+                <Image height={150} width={150} src='/image2.png' />
+            </div>
+            <div className="footer-right">
+                <div className="footer-right-top">
+                    <motion.h2 variants={h1Variants} animate='visible' initial='hidden'>Take ownership of your course</motion.h2>
+                    <p>Finally a partner that handles that does something</p>
+                    <div className="links">
+                        <a href="/">HOME</a>
+                        <a href="/">SERVICES</a>
+                        <a href="/">CASE STUDY</a>
+                        <a href="/">ABOUT US</a>
+                    </div>
+                </div>
+                <div className="footer-right-bottom">
+                    <div className="bar">
+                        <h1>start a converstation</h1>
+                        <span />
+                    </div>
+                    <div className='contact-links'>
+                        <BsInstagram className='contact-icons' />
+                        <FiMail className='contact-icons' />
+                    </div>
+                </div>
+            </div>
+        </footer>
+    )
+}
+
+export default Footer
