@@ -6,9 +6,93 @@
     // outline: 0.5px solid yellow;
 }
 
-.navbar {
-    color: $primary;
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
+
+::-webkit-scrollbar
+{
+	width: 8px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: $dark;
+}
+
+.navbar {
+    @include font($fontSize: .8rem);
+    @include flexBox;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top:0;
+    background-color: $light;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    .nav-logo {
+        @include flexBox;
+
+        p {
+            font-family: Poppins;
+            padding: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .nav-pagelinks {
+            @include flexBox($cGap: 2rem);
+            column-gap: 1rem;
+            padding-left: 1rem;
+
+            a {
+                svg {
+                    display: none;
+                }
+                
+                p {
+                    font-size: 0.8rem;
+                    color: rgb(99, 99, 99);
+                    font-weight: 500;
+                    transition: $transition;
+                }
+                
+                transition: $transition;
+                padding: 0.3rem 1.2rem;
+                border-radius: 3px;
+
+                &:hover {
+                    color: #333;
+                    background-color: rgba(232, 232, 232, 0.718);
+                }
+            }
+        }
+    }
+
+    .navbar-links {
+        @include flexBox($flexDirection: row, $cGap: 2rem);
+        
+        .buttons {
+            border-radius: 3px;
+            cursor: pointer;
+            padding: 0.3rem 1.2rem;
+            transition: $transition;
+            // background-color: $primary;
+            border: 2px solid transparent;
+            
+            &:hover {
+                color: #333;
+                border: 2px solid $primary;
+                // background-color: rgba(232, 232, 232, 0.718);
+            }
+        }
+    }
+}
+
 
 footer {
     display: grid;
@@ -23,6 +107,8 @@ footer {
         column-span: 1;
         @include flexBox;
         // background-color: red;
+
+
     }
 
     .footer-right {
@@ -98,20 +184,21 @@ footer {
 @media only screen and (max-width: 1250px) {
     // .nav {}
 
+
     footer {
-        padding:2rem 4rem ;
+        padding: 2rem 4rem;
         grid-template-columns: repeat(5, 1fr);
 
         .footer-left {
             column-span: 0;
             display: none;
-       
+
         }
 
         .footer-right {
             grid-column-end: span 5;
 
-            .footer-right-bottom{
+            .footer-right-bottom {
 
                 .contact-links {
                     @include flexBox ($cGap: 2rem);
@@ -125,63 +212,63 @@ footer {
 
 //  media
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 660px) {
     // .nav {}
+.navbar{
+    .nav-logo{
+        .nav-pagelinks{
+            a{
+                p{
+                    display: none;
 
-    footer {
-        grid-template-columns: repeat(5, 1fr);
-        text-align: center;
+                }
+                svg{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+    .footer-right {
+        grid-column-end: span 5;
 
-        .footer-left {
-            column-span: 0;
-            display: none;
-            // @include flexBox;
-            // background-color: red;
+        .footer-right-top {
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            p {
+
+                font-size: 0.8rem;
+            }
+
+            .links {
+                @include flexBox($flexDirection: column);
+                @include font($fontSize: 0.8rem);
+                margin-bottom: 1.5rem;
+                margin-top: 1rem;
+            }
         }
 
-        .footer-right {
-            grid-column-end: span 5;
+        .footer-right-bottom {
 
-            .footer-right-top {
+            .bar {
+                grid-template-rows: 1fr 1fr;
+                place-items: center;
+                grid-gap: 0rem;
 
-                h2 {
-                    font-size: 1.7rem;
+                h1 {
+                    grid-column-end: span 5;
                 }
 
-                p {
-
-                    font-size: 0.8rem;
+                span {
+                    grid-column-end: span 5;
+                    // width: 0%;
+                    align-self: center;
+                    align-items: center;
                 }
-
-                .links {
-                    @include flexBox($flexDirection: column);
-                    @include font($fontSize: 0.8rem);
-                    margin-bottom: 1.5rem;
-                    margin-top: 1rem;}
             }
-
-            .footer-right-bottom {
-
-                .bar {
-                    grid-template-rows: 1fr 1fr;
-                    place-items: center;
-                    grid-gap: 0rem;
-
-                    h1 {
-                        grid-column-end: span 5;
-                    }
-
-                    span {
-                        grid-column-end: span 5;
-                        // width: 0%;
-                        align-self: center;
-                        align-items: center;
-                    }
-                }
-
-                
-            }
-
         }
     }
 }
