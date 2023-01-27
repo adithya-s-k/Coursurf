@@ -1,8 +1,8 @@
 import '../styles/globals.css';
 import '../sass/styles.scss'
 import { ChakraProvider } from '@chakra-ui/react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '../components/navbar';
+import Footer from '../components/footer';
 import { AnimatePresence } from 'framer-motion';
 
 function MyApp({ Component, pageProps }) {

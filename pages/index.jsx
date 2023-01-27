@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Card from '../components/Card';
+import Card from '../components/card';
 
 export default function Home() {
   return (
