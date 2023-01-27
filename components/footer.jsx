@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer>
             <div className='footer-left'>
-                <Image height={150} width={150} src='/image2.png' alt='footer-logo'/>
+                {/* <Image height={150} width={150} src='/image2.png' alt='footer-logo'/> */}
             </div>
             <div className="footer-right">
                 <div className="footer-right-top">
