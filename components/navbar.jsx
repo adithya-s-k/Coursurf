@@ -3,9 +3,8 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Document } from 'postcss'
 import React from 'react'
-import { AiFillHome } from 'react-icons/ai'
+import { AiFillHome ,AiOutlineAlignRight} from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
-import { MdFormatAlignJustify } from 'react-icons/md'
 import { RxCross1 } from 'react-icons/rx'
 
 
@@ -50,7 +49,7 @@ const Navbar = () => {
 
         <div className='mobile-view' onClick={mobileView}>
           <p id='switch'>ON</p>
-          <MdFormatAlignJustify id='ham' color='#333' size={26} />
+          <AiOutlineAlignRight id='ham' color='#333' size={26} />
           <RxCross1 id='cross' color='#333' size={26} />
           <motion.div layout animate={{type:'spring'}} className="mobile-links" id='mv'>
             <Link href='/'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
