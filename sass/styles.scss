@@ -227,6 +227,7 @@ footer {
     @include flexBox;
     gap: 1.5rem;
     transition: $transition;
+    margin:3rem 2rem;
 
     .card {
         position: relative;
@@ -286,6 +287,8 @@ footer {
                     @include font($py: 0, $px: 0.3rem, $fontSize: 0.65rem);
                     border: 1px solid $primary;
                     border-radius: 10px;
+                    padding-left:  0.5rem;
+                    padding-right:  0.5rem;
                     margin-right: 0.5rem;
                     display: inline-block;
                     transition: $transition;

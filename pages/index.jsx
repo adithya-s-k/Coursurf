@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Card from '../components/Card';
+import Card from '../components/card';
 
 export default function Home() {
   return (
@@ -10,20 +10,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="text-3xl">Coursurf</h1>
-      <h1 className="text-3xl">Coursurf</h1>
-      <h1 className="text-3xl">Coursurf</h1>
-      <div className="flex flex-col justify-center items-center w-full h-full">
-
-        <div className='card-container'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-        <h1 className="text-3xl">Coursurf</h1>
+      <div className='card-container'>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
       </div>
     </div>
   );
