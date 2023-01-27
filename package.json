@@ -12,6 +12,8 @@
     "@chakra-ui/react": "^2.4.9",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "axios": "^1.2.2",
     "framer-motion": "^8.5.2",
     "json5": "^2.2.3",
