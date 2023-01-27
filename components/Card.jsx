@@ -4,21 +4,25 @@ import Image from 'next/image'
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai';
 import '@splidejs/react-splide/css';
-import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+// import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
 const SplideProps = {
-    // autoplay: true,
-    autoScroll: {
-        speed: 1,
-    },
-    // type: 'loop',
-    drag: 'free',
+    // perMove: 1,
+    // drag: 'free',
     // focus: 'center',
+    rewind : true,
+    autoplay: true,
+    type: 'loop',
     perPage: 3,
     arrows: false,
     pagination: false,
+    omitEnd: true,
+    snap   : true,
 }
+
+
+
 const Card = () => {
     const price = 5000;
     return (
@@ -56,7 +60,7 @@ const Card = () => {
                     <SplideSlide className='tag'>
                         3-4 Months
                     </SplideSlide>
-                    <SplideSlide className='tag'>
+                    <SplideSlide className='tag' >
                         3-4 Months
                     </SplideSlide>
                 </Splide>
@@ -65,15 +69,14 @@ const Card = () => {
                     University of Michigan
                 </div>
 
-                <Text className='desc' noOfLines={5}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate sit eaque rem doloribus deserunt commodi. Aliquid temporibus, tenetur necessitatibus exercitationem, eum nisi perspiciatis dicta laborum nemo magnam asperiores porro ipsam?</Text>
+                <Text className='desc' noOfLines={5}>Gain new insights into your data . Learn to apply data science methods and techniques, and acquire analysis skills.</Text>
 
+                {/* <div className="badges">
 
-                <div className="badges">
+                </div> */}
 
-                </div>
-
-                <Text className='feature' noOfLines={3}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam dolor. Cumque distinctio est esse dolorem sit omnis ipsam eligendi animi nesciunt! Totam recusandae, natus ex perferendis ratione eum repellat hic maiores! Accusantium labore, molestias tempore quae consectetur et temporibus?
+                <Text className='feature' noOfLines={5}>
+                    The 5 courses in this University of Michigan specialization introduce learners to data science through the python programming language. This skills-based specialization is intended for learners who have a basic python or programming background, and want to apply statistical, machine learning, information visualization, text analysis, and social network analysis techniques through popular python toolkits such as pandas, matplotlib, scikit-learn, nltk, and networkx to gain insight into their data.
                 </Text>
 
                 <div className='btns'>
