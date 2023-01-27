@@ -1,3 +1,18 @@
+export const SplideProps = {
+    // perMove: 1,
+    // drag: 'free',
+    // focus: 'center',
+    rewind: true,
+    autoplay: true,
+    type: 'loop',
+    perPage: 3.2,
+    arrows: false,
+    pagination: false,
+    omitEnd: true,
+    snap: true,
+}
+
+
 export const h1Variants = {
     hidden: {
         opacity: 0,

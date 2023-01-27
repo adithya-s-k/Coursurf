@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="buttons">Login</div>
 
         <div className='mobile-view' onClick={mobileView}>
-          <p id='switch'>ON</p>
+          <p id='switch'></p>
           <AiOutlineAlignRight id='ham' color='#333' size={26} />
           <RxCross1 id='cross' color='#333' size={26} />
           <motion.div layout animate={{type:'spring'}} className="mobile-links" id='mv'>
@@ -57,7 +57,6 @@ const Navbar = () => {
             <Link href='/search'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
             <Link href='/'>SignUp</Link>
             <Link href='/'>Login</Link>
-            {/* <Link href='/'>Home</Link> */}
           </motion.div>
         </div>
       </div>
