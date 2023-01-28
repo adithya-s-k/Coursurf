@@ -14,9 +14,7 @@ export default function Home() {
       <div className="card-container">
         <CardSkeleton />
         <CardSkeleton />
-        <Card />
-        <Card />
-        <Card />
+        <CardSkeleton />
         <Card />
         <Card />
         <Card />
