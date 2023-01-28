@@ -3,13 +3,13 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai';
 import '@splidejs/react-splide/css';
-import { SplideProps } from './Variants';
-
+import { cardVariants, SplideProps } from './Variants';
+import { motion } from 'framer-motion';
 
 const Card = () => {
     const price = 5000;
     return (
-        <div className='card'>
+        <motion.div variant={cardVariants} initial='hidden' animate='visible' className='card'>
             <div className="top">
                 <img className='w-full card-img' height='30%' src='https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera-course-photos/a1/fd9a9b0f404af6842d49aad8cf141a/Andrew-WA-Thompson-699-1-.jpg?auto=format%2Ccompress%2C%20enhance&dpr=1&w=600&h=216&fit=fill&q=50' alt='course-img' />
                 <img className="course-provider-logo" src='https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/70/de505d47be7d3a063b51b6f856a6e2/New-Block-M-Stacked-Blue-295C_600x600.png?auto=format%2Ccompress&dpr=1&w=25&h=25&q=40' />
@@ -63,7 +63,7 @@ const Card = () => {
                     {/* <div className='price'>{price == 0 ? 'Free' : price + 'INR'}</div> */}
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

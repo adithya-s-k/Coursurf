@@ -42,7 +42,7 @@
 }
 
 .courseBadges {
-    margin: 0.35rem 0;
+    margin: 0.3rem 0;
     display: flex;
     gap: 0.5rem;
 }
@@ -58,6 +58,7 @@
 }
 
 .titleName {
+    margin: 0.3rem 0 0.4rem 0;
     width: 70%;
 }
 
@@ -89,5 +90,9 @@
     .card {
         height: 28rem;
         width: 18rem;
+    }
+
+    .tag {
+        width: 5rem;
     }
 }

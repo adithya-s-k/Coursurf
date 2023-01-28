@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Document } from 'postcss'
 import React from 'react'
-import { AiFillHome ,AiOutlineAlignRight} from 'react-icons/ai'
+import { AiFillHome, AiOutlineAlignRight } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 import { RxCross1 } from 'react-icons/rx'
-
+import { mobileVariants } from './Variants'
 
 
 
@@ -17,17 +17,19 @@ const Navbar = () => {
     const toggle = document.getElementById('switch');
     const cross = document.getElementById('cross');
     const ham = document.getElementById('ham');
-
+    
     if (toggle.innerText === 'ON') {
       toggle.innerText = 'OFF';
       mv.style.display = 'none'
       cross.style.display = 'none'
       ham.style.display = 'block'
+      mv.style.height = 0
     } else {
       ham.style.display = 'none'
       cross.style.display = 'block'
       toggle.innerText = 'ON';
       mv.style.display = 'block'
+      mv.style.height = '40vh';
     }
   }
 
@@ -51,10 +53,10 @@ const Navbar = () => {
           <p id='switch'></p>
           <AiOutlineAlignRight id='ham' color='#333' size={26} />
           <RxCross1 id='cross' color='#333' size={26} />
-          <motion.div layout animate={{type:'spring'}} className="mobile-links" id='mv'>
-            <Link href='/'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
-            <Link href='/'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
-            <Link href='/search'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
+          <motion.div variants={mobileVariants} animate='visible' initial='hidden' className="mobile-links"  whileHover='hover' id='mv'>
+            <Link href='/'><p>Home</p></Link>
+            <Link href='/search'><p>Search</p></Link>
+            <Link href='/about'><p>About</p></Link>
             <Link href='/'>SignUp</Link>
             <Link href='/'>Login</Link>
           </motion.div>
