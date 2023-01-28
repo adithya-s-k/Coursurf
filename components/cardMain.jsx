@@ -71,3 +71,12 @@ const Card = () => {
 }
 
 export default Card
+
+
+export const CardSkeleton = () => {
+    return(
+        <div className='s-card'>
+        
+        </div>
+    )
+}
