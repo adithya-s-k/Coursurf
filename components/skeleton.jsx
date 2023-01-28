@@ -17,7 +17,7 @@ export const CardSkeleton = () => {
                         <Skeleton className={skeleton.tag} />
                     </div>
                     <Skeleton className={skeleton.titleName} />
-                    <Skeleton className={skeleton.desc} count={4} />
+                    <Skeleton className={skeleton.desc} count={3} />
                 </div>
                 <div className={skeleton.btns}>
                     <Skeleton className={skeleton.btn} />

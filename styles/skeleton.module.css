@@ -13,7 +13,6 @@
     height: 11.5rem;
 }
 
-
 .logo {
     height: 30px;
     width: 30px;
@@ -43,8 +42,7 @@
 }
 
 .courseBadges {
-    margin-bottom: 0.5rem;
-    margin: 0.5rem 0;
+    margin: 0.35rem 0;
     display: flex;
     gap: 0.5rem;
 }
