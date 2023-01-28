@@ -5,7 +5,7 @@ export const SplideProps = {
     rewind: true,
     autoplay: true,
     type: 'loop',
-    perPage: 3.2,
+    perPage: 3,
     arrows: false,
     pagination: false,
     omitEnd: true,

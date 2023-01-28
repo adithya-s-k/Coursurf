@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Card from '../components/cardMain';
+import { CardSkeleton } from '../components/Skeleton';
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       </Head>
 
       <div className="card-container">
+        <CardSkeleton />
+        <CardSkeleton />
         <Card />
         <Card />
         <Card />
@@ -19,5 +22,5 @@ export default function Home() {
         <Card />
       </div>
     </div>
-  );
+  
 }

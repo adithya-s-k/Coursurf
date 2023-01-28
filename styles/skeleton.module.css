@@ -1,0 +1,95 @@
+.card {
+    position: relative;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    height: 30rem;
+    width: 20rem;
+    background-color: rgba(239, 239, 239, 0.24);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.top {
+    height: 11.5rem;
+}
+
+
+.logo {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    bottom: -10%;
+    top: -20px;
+    left: 85%;
+    padding: 0.2rem;
+    border: 3px solid #fff;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 0.8rem;
+    margin: -1rem 0.5rem 0 0.5rem;
+}
+
+.platform {
+    width: 40%;
+}
+
+.title {
+    margin: 0.2rem 0;
+    height: 1.2rem;
+    width: 80%;
+}
+
+.courseBadges {
+    margin-bottom: 0.5rem;
+    margin: 0.5rem 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tag {
+    border-radius: 10px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 5.5rem;
+    height: 0.8rem;
+    display: inline-block;
+    outline: 2px solid transparent;
+}
+
+.titleName {
+    width: 70%;
+}
+
+.desc {
+    height: 0.95rem;
+}
+
+.btns {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0.8rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.btn {
+    width: 6rem;
+    height: 1.8rem;
+}
+
+@media only screen and (max-width: 660px) {
+
+    .card {
+        height: 28rem;
+        width: 18rem;
+    }
+}

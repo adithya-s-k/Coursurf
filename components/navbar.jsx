@@ -39,7 +39,7 @@ const Navbar = () => {
         <HStack className='nav-pagelinks'>
           <Link href='/'><p>Home</p></Link>
           <Link href='/'><BsSearch className='nav-images' size={18} /><p>Search</p></Link>
-          <Link href='/'><AiFillHome className='nav-images' /><p>Home</p></Link>
+          <Link href='/about'><AiFillHome className='nav-images' /><p>About</p></Link>
         </HStack>
       </motion.div>
 
