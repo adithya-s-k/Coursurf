@@ -12,8 +12,8 @@ export default function Home() {
       </Head>
 
       <div className="card-container">
-      <CardSkeleton />
-      <CardSkeleton />
+        <CardSkeleton />
+        <CardSkeleton />
         <Card />
         <Card />
         <Card />
@@ -22,5 +22,5 @@ export default function Home() {
         <Card />
       </div>
     </div>
-  );
+  
 }

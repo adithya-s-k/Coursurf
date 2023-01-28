@@ -85,3 +85,11 @@
     width: 6rem;
     height: 1.8rem;
 }
+
+@media only screen and (max-width: 660px) {
+
+    .card {
+        height: 28rem;
+        width: 18rem;
+    }
+}
