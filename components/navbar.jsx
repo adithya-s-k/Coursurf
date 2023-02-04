@@ -1,13 +1,11 @@
-import { Button, ButtonGroup, HStack, VStack } from '@chakra-ui/react'
+import { HStack } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Document } from 'postcss'
 import React from 'react'
-import { AiFillHome ,AiOutlineAlignRight} from 'react-icons/ai'
+import { AiFillHome, AiOutlineAlignRight } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 import { RxCross1 } from 'react-icons/rx'
-
-
 
 
 const Navbar = () => {
@@ -51,10 +49,10 @@ const Navbar = () => {
           <p id='switch'></p>
           <AiOutlineAlignRight id='ham' color='#333' size={26} />
           <RxCross1 id='cross' color='#333' size={26} />
-          <motion.div layout animate={{type:'spring'}} className="mobile-links" id='mv'>
-            <Link href='/'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
-            <Link href='/'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
-            <Link href='/search'><AiFillHome className='nav-images' size={18} /><p>Home</p></Link>
+          <motion.div layout animate={{ type: 'spring' }} className="mobile-links" id='mv'>
+            <Link href='/'>Home</Link>
+            <Link href='/'>About</Link>
+            <Link href='/search'>Search</Link>
             <Link href='/'>SignUp</Link>
             <Link href='/'>Login</Link>
           </motion.div>

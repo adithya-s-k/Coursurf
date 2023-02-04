@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Card from '../components/cardMain';
+import Search from '../components/search';
 import { CardSkeleton } from '../components/skeleton';
 
 export default function Home() {
@@ -11,12 +12,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Search />
       <div className="card-container">
         <CardSkeleton />
         <CardSkeleton />
-        <Card />
-        <Card />
-        <Card />
+        <CardSkeleton />
         <Card />
         <Card />
         <Card />
