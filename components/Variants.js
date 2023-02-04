@@ -5,7 +5,7 @@ export const SplideProps = {
     rewind: true,
     autoplay: true,
     type: 'loop',
-    perPage: 3,
+    perPage: 2.5,
     arrows: false,
     pagination: false,
     omitEnd: true,
@@ -47,5 +47,43 @@ export const linkVariants = {
     hover: {
         scale: 1.2,
         color: '#FD8A45'
+    }
+}
+
+
+export const mobileVariants = {
+    hidden: {
+        opacity: 0,
+        y: '-5rem',
+        transition: {
+            duration: 0.5,
+        }
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            type: 'spring'
+        }
+    }, 
+    hover:{
+        scale: 1.1
+    }
+}
+export const cardVariants = {
+    hidden: {
+        opacity: 0,
+        y: '-5rem',
+        transition: {
+            duration: 1
+        }
+    },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1
+        }
     }
 }

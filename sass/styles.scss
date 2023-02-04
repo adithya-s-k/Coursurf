@@ -108,7 +108,6 @@
 
             .mobile-links {
                 border-top: 1px solid $primary;
-                height: 50vh;
                 display: none;
                 position: absolute;
                 left: 0;
@@ -117,16 +116,15 @@
                 background-color: $light;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
-                transition: $transition;
-                // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                font-weight: 600;
                 -webkit-box-shadow: 0 10px 10px -10px #000000;
                 -moz-box-shadow: 0 10px 10px -10px #000000;
                 box-shadow: 0 10px 10px -10px #000000;
+                transition: $transition;
 
                 a {
                     @include flexBox;
                     padding: 0.3rem 1.2rem;
-                    // background-color: yellow;
                     margin: 4px;
                     border: 2px solid transparent;
                     border-radius: 5px;
