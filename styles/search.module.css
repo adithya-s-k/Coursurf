@@ -80,6 +80,7 @@
 	cursor: pointer;
 	transition: all 0.3s;
 	text-align: center;
+	color: #fff;
 }
 
 .cross {
