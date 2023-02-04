@@ -220,12 +220,85 @@ footer {
     }
 }
 
-.card-container {
+#hero-section {
+    min-height: calc(100vh - 6rem);
+    transform: translateY(-10%);
+    // background-color: red;
     @include flexBox;
-    gap: 1.5rem;
-    transition: $transition;
-    margin: 3rem 2rem;
 
+    .content {
+        @include flexBox($flexDirection: column, $rGap: 1rem);
+        // background-color: yellowgreen;
+        width: 100%;
+
+        h1 {
+            font-size: 3em;
+            font-weight: 600;
+            font-family: Poppins;
+            // margin: 0 2rem;
+        }
+    }
+}
+
+#institutions {
+    font-family: $fontMain, sans-serif;
+
+    .title-box {
+        margin: 0 5rem;
+
+        .certificate {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $primary;
+        }
+
+        .heading {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        .desc {
+            font-size: 1.2rem
+        }
+    }
+
+    .card-container {
+        @include flexBox;
+        gap: 1.5rem;
+        transition: $transition;
+        margin: 3rem 2rem;
+    }
+}
+
+
+#trending-courses {
+    font-family: $fontMain, sans-serif;
+
+    .title-box {
+        margin: 0 5rem;
+
+        .certificate {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $primary;
+        }
+
+        .heading {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        .desc {
+            font-size: 1.2rem
+        }
+    }
+
+    .card-container {
+        @include flexBox;
+        gap: 1.5rem;
+        transition: $transition;
+        margin: 3rem 2rem;
+    }
 }
 
 
@@ -250,11 +323,9 @@ footer {
                     @include flexBox ($cGap: 2rem);
                 }
             }
-
         }
     }
 }
-
 
 //  media
 
@@ -341,6 +412,30 @@ footer {
                     padding: 00rem 0;
                 }
             }
+        }
+    }
+
+    #trending-courses,
+    #institutions {
+
+        .title-box {
+            margin: 0 2rem;
+            font-family: $fontMain, sans-serif;
+
+            .certificate {
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+
+            .heading {
+                margin: 0.3rem 0;
+                font-size: 1.5rem;
+            }
+
+            .desc {
+                font-size: 1rem
+            }
+
         }
     }
 }

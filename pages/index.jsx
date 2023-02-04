@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Card from '../components/cardMain';
 import Search from '../components/search';
 import { CardSkeleton } from '../components/skeleton';
+import Titles from '../components/Titles';
 
 export default function Home() {
   return (
@@ -13,11 +14,13 @@ export default function Home() {
       </Head>
 
       <section id='hero-section'>
-        <Search />
-
+        <div className="content">
+          <h1>Let's get you a new course</h1>
+          <Search />
+        </div>
       </section>
       <section id="trending-courses">
-
+        <Titles certificate="Master's and Bachelor's Degrees" heading="Find a top degree that fits your life" desc="Breakthrough pricing on 100% online degrees from top universities." />
         <div className="card-container">
           <CardSkeleton />
           <CardSkeleton />
@@ -29,8 +32,17 @@ export default function Home() {
       </section>
 
       <section id='institutions'>
-        <CardSkeleton />
-        <Card />
+        <Titles certificate="Master's and Bachelor's Degrees" heading="Find a top degree that fits your life" desc="Breakthrough pricing on 100% online degrees from top universities." />
+        <div className="card-container">
+          <CardSkeleton />
+          <Card />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <Card />
+          <Card />
+          <Card />
+        </div>
 
       </section>
 
