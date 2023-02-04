@@ -4,9 +4,15 @@ import React from 'react'
 import { AiFillStar } from 'react-icons/ai';
 import '@splidejs/react-splide/css';
 import { SplideProps } from './Variants';
+import Link from 'next/link';
 
 
 const Card = () => {
+
+    const readmore = (e) => {
+        // const desc = 
+        console.log(e)
+    }
     const price = 5000;
     return (
         <div className='card'>
@@ -51,11 +57,12 @@ const Card = () => {
                     University of Michigan
                 </div>
 
-                <Text className='desc' noOfLines={4}>Gain new insights into your data . Learn to apply data science methods and techniques, and acquire analysis skills.</Text>
-
-                <Text className='feature' noOfLines={4}>
+                <Text className='desc' noOfLines={8}>
+                    Gain new insights into your data . Learn to apply data science methods and techniques, and acquire analysis skills.
                     The 5 courses in this University of Michigan specialization introduce learners to data science through the python programming language. This skills-based specialization is intended for learners who have a basic python or programming background, and want to apply statistical, machine learning, information visualization, text analysis, and social network analysis techniques through popular python toolkits such as pandas, matplotlib, scikit-learn, nltk, and networkx to gain insight into their data.
                 </Text>
+
+                <Link href='/details' className='readmore'>Read more</Link>
 
                 <div className='btns'>
                     <a href='https://in.coursera.org/specializations/data-science-python' className='site-btn'>Go to course</a>

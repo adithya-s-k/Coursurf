@@ -8,8 +8,6 @@ import { BsSearch } from 'react-icons/bs'
 import { RxCross1 } from 'react-icons/rx'
 
 
-
-
 const Navbar = () => {
 
   const mobileView = () => {

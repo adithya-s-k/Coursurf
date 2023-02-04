@@ -10,7 +10,8 @@
 }
 
 .top {
-    height: 11.5rem;
+    transform: translateY(-0.25rem);
+    height: 11.53rem;
 }
 
 .logo {
@@ -63,6 +64,11 @@
 
 .desc {
     height: 0.95rem;
+}
+
+.readmore{
+    width: 40%;
+    height: 1.5rem;
 }
 
 .btns {
