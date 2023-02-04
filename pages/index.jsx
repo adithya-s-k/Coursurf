@@ -12,15 +12,28 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Search />
-      <div className="card-container">
-        <CardSkeleton />
-        <CardSkeleton />
+      <section id='hero-section'>
+        <Search />
+
+      </section>
+      <section id="trending-courses">
+
+        <div className="card-container">
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </section>
+
+      <section id='institutions'>
         <CardSkeleton />
         <Card />
-        <Card />
-        <Card />
-      </div>
+
+      </section>
+
     </div>
   );
 }

@@ -5,12 +5,12 @@ import Navbar from '../components/navbar';
 import Footer from '../components/footer';
 import { AnimatePresence } from 'framer-motion';
 
-import { Poppins } from '@next/font/google'
+// import { Poppins } from '@next/font/google'
 
-const roboto = Poppins({
-  weight: ['100','200','300','400','500','600','700','800','900'],
-  subsets : ['latin']
-})
+// const roboto = Poppins({
+//   weight: ['100','200','300','400','500','600','700','800','900'],
+//   subsets : ['latin']
+// })
 
 
 
@@ -19,9 +19,9 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider>
       <AnimatePresence mode="wait" initial={false} />
       <Navbar />
-      <main className={roboto.className}>
+      {/* <main className={roboto.className}> */}
         <Component {...pageProps} />
-      </main>
+      {/* </main> */}
       <Footer />
     </ChakraProvider>
   );

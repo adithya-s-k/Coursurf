@@ -1,4 +1,4 @@
-// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Oswald:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "variables";
 @import "functions";
 
@@ -226,156 +226,6 @@ footer {
     transition: $transition;
     margin: 3rem 2rem;
 
-    .card {
-        position: relative;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        height: 30rem;
-        width: 20rem;
-        background-color: rgba(239, 239, 239, 0.24);
-        border-radius: 1rem;
-        overflow: hidden;
-        transition: $transition;
-
-        &:hover {
-            .top {
-                .card-img {
-                    height: 5rem;
-                }
-            }
-        }
-
-
-        .top {
-            .card-img {
-                height: 11.5rem;
-                object-fit: cover;
-                transition: $transition;
-            }
-
-            .course-provider-logo {
-                position: relative;
-                background-color: #fff;
-                bottom: -10%;
-                top: -20px;
-                left: 85%;
-                padding: 0.2rem;
-                border-radius: 4px;
-                border: 1px solid $light;
-            }
-        }
-
-        .bottom {
-            @include flexBox($flexDirection: row, $justifyContent: flex-start);
-            padding: 0rem 0.8rem;
-            margin-top: -1rem;
-            // overflow: scroll;
-
-            .title {
-                @include font($fontSize: 0.9rem, $px: 0, $py: 0);
-                padding: 0.3rem 0;
-                font-weight: 500;
-            }
-
-
-            .course-badges {
-                margin-bottom: 0.5rem;
-
-                .tag {
-                    max-width: 8rem;
-                    @include font($py: 0, $px: 0.3rem, $fontSize: 0.65rem);
-                    border: 1px solid $primary;
-                    border-radius: 10px;
-                    padding-left: 0.5rem;
-                    padding-right: 0.5rem;
-                    margin-right: 0.5rem;
-                    display: inline-block;
-                    transition: $transition;
-                    outline: 2px solid transparent;
-                }
-
-                .star {
-                    font-weight: bold;
-                    background-color: $primary;
-                    color: $light;
-                }
-            }
-
-            .provider {
-                font-weight: 600;
-            }
-
-            .desc {
-                @include font($fontSize: 0.75rem, $px: 0, $py: 0.3rem);
-                font-weight: 300;
-                // overflow-y: hidden;
-                // overflow-x: hidden;
-                overflow: hidden;
-            }
-
-            .readmore {
-                width: 100%;
-                margin-top: 0.5rem;
-                border: 2px solid $primary;
-                background-color: $primary;
-                border-radius: 5px;
-                font-size: 0.8rem;
-                font-weight: 500;
-                text-align: center;
-                padding: 0.2rem 0.8rem;
-                color: $light;
-                transition: $transition;
-
-                &:hover {
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                }
-            }
-
-            .btns {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                padding: 0.8rem 0;
-                width: 100%;
-                @include flexBox;
-                background-color: $light;
-                z-index: 2;
-                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-                .price {
-                    border: 2px solid $primary;
-                    border-radius: 5px;
-                    padding: 0.2rem 0.8rem;
-                    color: $primary;
-                    font-weight: 600;
-                    font-size: 0.8rem;
-                    transition: $transition;
-
-                    &:hover {
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                    }
-                }
-
-                .site-btn {
-                    border: 2px solid $primary;
-                    background-color: $primary;
-                    border-radius: 5px;
-                    font-size: 0.8rem;
-                    font-weight: 500;
-                    padding: 0.2rem 0.8rem;
-                    color: $light;
-                    transition: $transition;
-
-                    &:hover {
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                    }
-                }
-            }
-        }
-
-        &:hover {
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-        }
-    }
 }
 
 
@@ -484,6 +334,12 @@ footer {
         .card {
             height: 28rem;
             width: 18rem;
+            .bottom{
+
+                .platform {
+                    padding: 00rem 0;
+                }
+                }
         }
     }
 }
