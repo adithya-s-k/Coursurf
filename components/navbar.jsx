@@ -21,11 +21,13 @@ const Navbar = () => {
       mv.style.display = 'none'
       cross.style.display = 'none'
       ham.style.display = 'block'
+      mv.style.height = '0'
     } else {
       ham.style.display = 'none'
       cross.style.display = 'block'
       toggle.innerText = 'ON';
       mv.style.display = 'block'
+      mv.style.height = 'calc( 50vh - 3.84rem )'
     }
   }
 
@@ -51,7 +53,7 @@ const Navbar = () => {
           <RxCross1 id='cross' color='#333' size={26} />
           <motion.div layout animate={{ type: 'spring' }} className="mobile-links" id='mv'>
             <Link href='/'>Home</Link>
-            <Link href='/'>About</Link>
+            <Link href='/about'>About</Link>
             <Link href='/search'>Search</Link>
             <Link href='/'>SignUp</Link>
             <Link href='/'>Login</Link>
