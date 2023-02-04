@@ -31,36 +31,48 @@ const Navbar = () => {
     }
   }
 
+  const updateProgressBar = () => {
+    const { scrollTop, scrollHeight } = document.documentElement;
+    const scrollPercent = scrollTop / (scrollHeight - window.innerHeight) * 100 + '%';
+    document.querySelector('#progress-bar').style.setProperty('--progress', scrollPercent);
+  }
+
+  document.addEventListener('scroll', updateProgressBar);
+
   return (
-    <nav className='navbar'>
-      <motion.div className='nav-logo'>
-        <img src="image2.png" alt="logo" height={30} width={30} />
-        <p>Coursurf</p>
-        <HStack className='nav-pagelinks'>
-          <Link href='/'><p>Home</p></Link>
-          <Link href='/'><BsSearch className='nav-images' size={18} /><p>Search</p></Link>
-          <Link href='/about'><AiFillHome className='nav-images' /><p>About</p></Link>
-        </HStack>
-      </motion.div>
+    <div className='navbar-box'>
 
-      <div className="navbar-links">
-        <div className="buttons">Sign-up</div>
-        <div className="buttons">Login</div>
+      <nav className='navbar'>
+        <motion.div className='nav-logo'>
+          <img src="image2.png" alt="logo" height={30} width={30} />
+          <p>Coursurf</p>
+          <HStack className='nav-pagelinks'>
+            <Link href='/'><p>Home</p></Link>
+            <Link href='/'><BsSearch className='nav-images' size={18} /><p>Search</p></Link>
+            <Link href='/about'><AiFillHome className='nav-images' /><p>About</p></Link>
+          </HStack>
+        </motion.div>
 
-        <div className='mobile-view' onClick={mobileView}>
-          <p id='switch'></p>
-          <AiOutlineAlignRight id='ham' color='#333' size={26} />
-          <RxCross1 id='cross' color='#333' size={26} />
-          <motion.div layout animate={{ type: 'spring' }} className="mobile-links" id='mv'>
-            <Link href='/'>Home</Link>
-            <Link href='/about'>About</Link>
-            <Link href='/search'>Search</Link>
-            <Link href='/'>SignUp</Link>
-            <Link href='/'>Login</Link>
-          </motion.div>
+        <div className="navbar-links">
+          <div className="buttons">Sign-up</div>
+          <div className="buttons">Login</div>
+
+          <div className='mobile-view' onClick={mobileView}>
+            <p id='switch'></p>
+            <AiOutlineAlignRight id='ham' color='#333' size={26} />
+            <RxCross1 id='cross' color='#333' size={26} />
+            <motion.div layout animate={{ type: 'spring' }} className="mobile-links" id='mv'>
+              <Link href='/'>Home</Link>
+              <Link href='/about'>About</Link>
+              <Link href='/search'>Search</Link>
+              <Link href='/'>SignUp</Link>
+              <Link href='/'>Login</Link>
+            </motion.div>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <div id="progress-bar" />
+    </div>
   )
 }
 

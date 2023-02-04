@@ -32,13 +32,20 @@ export default function Home() {
       </section>
 
       <section id='institutions'>
-        <Titles certificate="Master's and Bachelor's Degrees" heading="Find a top degree that fits your life" desc="Breakthrough pricing on 100% online degrees from top universities." />
+        <Titles certificate="Courses and Specializations"
+         heading="Advance your career with new skills"
+         desc="Choose from over 4,000 courses in topics like business analytics, graphic design, Python, and more." />
         <div className="card-container">
           <CardSkeleton />
           <Card />
           <CardSkeleton />
           <CardSkeleton />
           <CardSkeleton />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
           <Card />
           <Card />
           <Card />
