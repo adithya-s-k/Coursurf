@@ -9,11 +9,6 @@ import Link from 'next/link';
 
 
 const Card = () => {
-
-    const readmore = (e) => {
-        // const desc = 
-        console.log(e)
-    }
     const price = 5000;
     return (
         <motion.div variant={cardVariants} initial='hidden' animate='visible' className='card'>

@@ -220,6 +220,10 @@ footer {
     }
 }
 
+.search-box{
+    background-color: red;
+}
+
 .card-container {
     @include flexBox;
     gap: 1.5rem;
