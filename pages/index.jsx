@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Search className='search-box' />
+      <Search />
       <div className="card-container">
         <CardSkeleton />
         <CardSkeleton />

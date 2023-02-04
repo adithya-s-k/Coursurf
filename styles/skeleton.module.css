@@ -67,7 +67,7 @@
     height: 0.95rem;
 }
 
-.readmore{
+.readmore {
     width: 40%;
     height: 1.5rem;
 }
@@ -94,8 +94,12 @@
 @media only screen and (max-width: 660px) {
 
     .card {
-        height: 28rem;
+        height: 28.5rem;
         width: 18rem;
+    }
+
+    .readmore {
+        display: none;
     }
 
     .tag {

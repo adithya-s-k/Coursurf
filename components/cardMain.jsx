@@ -53,7 +53,7 @@ const Card = () => {
                     University of Michigan
                 </div>
 
-                <Text className='desc' noOfLines={8}>
+                <Text className='desc' noOfLines={7}>
                     Gain new insights into your data . Learn to apply data science methods and techniques, and acquire analysis skills.
                     The 5 courses in this University of Michigan specialization introduce learners to data science through the python programming language. This skills-based specialization is intended for learners who have a basic python or programming background, and want to apply statistical, machine learning, information visualization, text analysis, and social network analysis techniques through popular python toolkits such as pandas, matplotlib, scikit-learn, nltk, and networkx to gain insight into their data.
                 </Text>

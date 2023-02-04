@@ -1,18 +1,23 @@
+.center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
 /* SEARCH BAR CONTAINER */
 .searchLocal {
-	width: 100%;
+	flex: 1 1 1rem;
 	max-width: 50rem;
 	display: flex;
 	align-items: center;
 	column-gap: 1rem;
 	padding-left: 1rem;
 	background: #fbfbfb;
-	border-radius: 0.5rem;
+	border-radius: 1rem;
 	min-height: 3.2rem;
 	height: auto;
-	/* border: 0.1rem solid #292929; */
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	border-right: none;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /* ICON */
@@ -46,8 +51,6 @@
 
 /* INPUT */
 .input {
-	height: 100%;
-	width: 100%;
 	flex: 1 1 2rem;
 	background: #fbfbfb;
 	display: flex;
@@ -55,18 +58,18 @@
 	border: none;
 	color: #292929;
 	font-size: 0.9rem;
-    font-family: Poppins;
+	font-family: Poppins;
 }
 
 .input::placeholder {
-    font-family: Poppins;
+	font-family: Poppins;
 	color: #333;
-    font-size: 0.9rem;
+	font-size: 0.9rem;
 }
 
 /* BUTTON */
 .button {
-    font-family: Poppins;
+	font-family: Poppins;
 	background: #FD8A45;
 	border: none;
 	border-radius: 0 1rem 1rem 0;
@@ -77,6 +80,23 @@
 	cursor: pointer;
 	transition: all 0.3s;
 	text-align: center;
+}
+
+.cross {
+	display: none;
+	cursor: pointer;
+	padding: 0 0.5rem 0 0;
+}
+
+.searchLocal:focus-within .cross,
+.cross:active,
+.cross:focus {
+	display: inline;
+}
+
+.crossSvg {
+	color: #333;
+	font-weight: 900;
 }
 
 .a {
@@ -92,10 +112,17 @@
 }
 
 /* MEDIAS */
-@media (max-width: 575px) {
+@media (max-width: 650px) {
 	.searchLocal {
 		padding: 0 0.25rem;
+		margin: 0 1rem;
 		column-gap: 0.1rem;
+		/* width: ; */
+	}
+
+	.icon {
+		font-size: 1.5rem;
+		padding: 0 0.3rem;
 	}
 
 	.button {
@@ -109,9 +136,9 @@
 		font-size: 1rem;
 	}
 
-    .input{
-        padding: 0 0.5rem;
-    }
+	.input {
+		padding: 0 0.5rem;
+	}
 
 	.input::placeholder {
 		font-size: 0.8rem;
