@@ -3,7 +3,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai';
 import '@splidejs/react-splide/css';
-import { SplideProps } from './Variants';
+import { cardVariants, SplideProps } from './Variants';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 
 const Card = () => {
