@@ -3364,6 +3364,11 @@
     "use-callback-ref" "^1.3.0"
     "use-sidecar" "^1.1.2"
 
+"react-stars@^2.2.5":
+  "integrity" "sha512-O//KS6Z9RZnUOU/r+3+wxCzNalVn/wEWIcbAQFRV3dw8WbV+ys/kgcpBPijqTiNpHGrcwZdtb/7wF/UVem20CQ=="
+  "resolved" "https://registry.npmjs.org/react-stars/-/react-stars-2.2.5.tgz"
+  "version" "2.2.5"
+
 "react-style-singleton@^2.2.1":
   "integrity" "sha512-ZWj0fHEMyWkHzKYUr2Bs/4zU6XLmq9HsgBURm7g5pAVfyn49DgUiNgY2d4lXRlYSiCif9YBGpQleewkcqddc7g=="
   "resolved" "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.2.1.tgz"
