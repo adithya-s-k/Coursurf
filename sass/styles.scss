@@ -334,6 +334,10 @@ footer {
                     }
                 }
 
+                #toggleFilter {
+                    display: none;
+                }
+
                 button {
                     color: $primary;
                     font-size: 0.65rem;
@@ -351,7 +355,7 @@ footer {
                 // height: 40vh;
                 border-radius: 10px;
                 font-size: 1rem;
-                
+
                 #section1,
                 #section2,
                 #section3,
@@ -361,25 +365,30 @@ footer {
                     padding: 1rem;
                     border-bottom: 1px solid rgba(206, 206, 206, 0.3);
 
-                    h2{
+                    h2 {
                         margin: 0.2rem 0;
                         font-weight: 500;
                     }
-                    .icon{
+
+                    .icon {
                         position: absolute;
                         right: 1rem;
-                        top:1.3rem;
+                        top: 1.3rem;
                         transition: $transition;
                         transform: rotate(-90deg);
                     }
-                    .active, .icon:hover{
+
+                    .active,
+                    .icon:hover {
                         background-color: rgba(243, 243, 243, 0.3);
                         transform: rotate(0deg);
                         cursor: pointer;
                     }
+
                     ul {
                         display: block;
                         transition: $transition;
+
                         li {
                             font-size: 0.8rem;
                             line-height: 140%;
@@ -518,18 +527,23 @@ footer {
                 /* margin: 1rem; */
                 .filter-header {
                     display: inline;
-                    background-color: rgba(243, 243, 243, 0.3);
-                    padding: 0.2rem 0.5rem;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    transition: all 0.3s eases;
-
-                    &:hover {
-                        background-color: rgba(206, 206, 206, 0.3);
-                    }
 
                     span {
-                        .filter-svgfilter {}
+                        display: none;
+                    }
+
+                    #toggleFilter {
+                        display: inline-block;
+                        background-color: rgba(243, 243, 243, 0.3);
+                        background-color: red;
+                        padding: 0.4rem 0.5rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: all 0.3s eases;
+
+                        &:hover {
+                            background-color: rgba(206, 206, 206, 0.3);
+                        }
                     }
 
                     button {
@@ -541,13 +555,16 @@ footer {
                     display: none;
                     margin-top: 0.9rem;
                     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-                    height: 40vh;
+                    // height: 40vh;
                     border-radius: 10px;
                     padding: 1rem;
                     font-size: 1rem;
 
                     #section1,
-                    #section2 {
+                    #section2,
+                    #section3,
+                    #section4,
+                    #section5 {
                         ul {
                             li {
                                 font-size: 0.8rem;
@@ -570,7 +587,6 @@ footer {
                         }
                     }
                 }
-
             }
         }
     }

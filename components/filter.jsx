@@ -14,7 +14,7 @@ const Filter = () => {
                 this.classList.toggle("active");
                 var panel = this.nextElementSibling;
 
-                console.log(panel.style.display);
+                // console.log(panel.style.display);
                 if (panel.style.display === "block") {
                     panel.style.display = "none";
                 } else {
@@ -33,15 +33,23 @@ const Filter = () => {
             }
         })
         // console.log(input)
+
+        const toggleFilter = document.getElementById("toggleFilter");
+        const body = document.getElementById("filterBody");
+        toggleFilter.addEventListener("click", function () {
+            if (body.style.display === 'none') body.style.display = 'block';
+            else body.style.display = ' none';
+        })
     }, [])
 
     return (
         <div className='filter-container'>
             <div className='filter-header'>
                 <span><MdToc className='filter-svgfilter' size={24} color={'#0a2540'} />Filter by</span>
+                <span id='toggleFilter'><MdToc className='filter-svgfilter' size={24} color={'#0a2540'} />Filter by</span>
                 <button id='clear'>Clear All</button>
             </div>
-            <div className='filter-body'>
+            <div className='filter-body' id='filterBody' style={{ display: 'block' }}>
                 <div id='section1'>
                     <ul>
                         <li>
