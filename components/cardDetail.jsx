@@ -21,6 +21,13 @@ const Carddetail = () => {
         value: '19 hours worth of material, 7 weeks long',
         available: true,
         // icon: '<IoSpeedometerOutline />'
+    }, {
+        type: 'start-date',
+        value: '23 Feb 2023',
+        available: true
+    },{
+        type: 'comment',
+        available: false
     }
     ]
 
@@ -54,7 +61,6 @@ const Carddetail = () => {
                 <div className={cardD.bottom}>
                     <p className={cardD.desc}>
                         Go from beginner to full stack developer at your pace in this remote bootcamp. Our courses don't stop at graduation, get 1:1 mentorship and career coaching from day one of the course, until the first day of your new job - or your money back.
-                        Go from beginner to full stack developer at your pace in this remote bootcamp. Our courses don't stop at graduation, get 1:1 mentorship and career coaching from day one of the course, until the first day of your new job - or your money back.
                     </p>
 
                     <div className={cardD.btns}>
@@ -68,8 +74,8 @@ const Carddetail = () => {
                     {filterFeatures.map((item, index) => (
                         <li className={cardD.featureItem} key={index}>
                             <span>
-                                {console.log(item.type)}
-                                {console.log(item.type === 'mode')}
+                                {/* {console.log(item.type)} */}
+                                {/* {console.log(item.type === 'mode')} */}
                                 {/* {item.type==='platform' && <BsStack/>} */}
                                 {/* {item.type==='mode' && <BsCalendar3Event/>} */}
                                 {/* {item.type==='duration' && <IoSpeedometerOutline/>} */}
@@ -81,7 +87,6 @@ const Carddetail = () => {
                     )
                     )}
                 </ul>
-
             </div>
         </div>
     )

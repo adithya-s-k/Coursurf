@@ -25,15 +25,15 @@
 
 .top {
     padding: 0.5rem;
-    /* background-color: red; */
     border-radius: 10px 0px 0 0;
     display: grid;
     grid-template-columns: 200px auto;
-    /* grid-template-rows: 1fr; */
 }
 
 .img {
     border-radius: 10px;
+    height: 7rem;
+    width: 100%;
 }
 
 .topRight {
@@ -42,20 +42,27 @@
 }
 
 .provider {
+    width: 8rem;
     font-weight: 500;
     font-size: 0.8rem;
 }
 
+.heading{
+    width: 80%;
+    height: 1.3rem;
+    margin-bottom:0.2rem;
+}
+
 .desc {
-    font-size: 0.85rem;
+    /* line-height: 2.2rem;
+    height: 0.8rem; */
 }
 
 .review {
     font-size: 0.6rem;
-}
-
-.review>span {
-    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: 50px 120px;
+    grid-column-gap: 1rem;
 }
 
 .review:nth-child(1) {
@@ -64,18 +71,13 @@
     justify-content: center;
 }
 
+
 .topLeft {
     /* background-color: violet; */
 }
 
 .bottom {
     padding: 0.5rem;
-    /* background-color: green; */
-    border-radius: 0 0 0 10px;
-}
-
-.desc {
-    font-size: 0.8rem;
 }
 
 .two {
@@ -106,7 +108,8 @@
 }
 
 .btns .btn {
-    border: 1px solid #FD8A45;
+    width:5.8rem;
+    height: 1.75rem;
     padding: 0.2rem 1rem;
     font-size: 0.8rem;
     border-radius: 5px;
@@ -115,15 +118,13 @@
     transition: all 0.3s ease;
 }
 
-.btns .btn:hover {
-    background-color: #FD8A45;
-    color: #fff;
-}
-
 @media only screen and (max-width: 780px) {
     .top {
         grid-template-columns: 1fr;
         border-radius: 10px 10px 0 0;
+    }
+    .img{
+        height: 17.315rem;
     }
     .desc{
         font-size: 0.75rem;
@@ -154,7 +155,9 @@
         grid-template-columns: 1fr;
         border-radius: 10px 10px 0 0;
     }
-
+    .img{
+        height: 10.875rem;
+    }
 
     .topRight {
         padding: 0.4rem;
