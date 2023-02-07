@@ -8,7 +8,8 @@
     padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-family: Poppins, 'sans-serif';
-    transition:  all 0.5s ease;
+    transition: all 0.5s ease;
+    background-color: #fff;
 }
 
 .container:hover {
@@ -47,10 +48,10 @@
     font-size: 0.8rem;
 }
 
-.heading{
+.heading {
     width: 80%;
     height: 1.3rem;
-    margin-bottom:0.2rem;
+    margin-bottom: 0.2rem;
 }
 
 .desc {
@@ -108,7 +109,7 @@
 }
 
 .btns .btn {
-    width:5.8rem;
+    width: 6.5rem;
     height: 1.75rem;
     padding: 0.2rem 1rem;
     font-size: 0.8rem;
@@ -123,10 +124,12 @@
         grid-template-columns: 1fr;
         border-radius: 10px 10px 0 0;
     }
-    .img{
+
+    .img {
         height: 17.315rem;
     }
-    .desc{
+
+    .desc {
         font-size: 0.75rem;
     }
 }
@@ -155,7 +158,8 @@
         grid-template-columns: 1fr;
         border-radius: 10px 10px 0 0;
     }
-    .img{
+
+    .img {
         height: 10.875rem;
     }
 

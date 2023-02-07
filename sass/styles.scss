@@ -301,6 +301,27 @@ footer {
     }
 }
 
+.search-head {
+    font-family: $fontMain, 'sans-serif';
+    margin: 1rem 10%;
+    // background-color: red;
+    font-size: 2.2rem;
+    padding: 1rem 0 1.5rem 0;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.487);
+
+    .search-count {
+        display: block;
+        width: 8rem;
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: rgba(199, 199, 199, 0.487);
+        padding: 0.3rem 1rem;
+        border-radius: 5px;
+        font-weight: 800;
+        margin-right: 1rem;
+        outline: none;
+    }
+}
 
 .search-dir {
     display: grid;
@@ -308,14 +329,18 @@ footer {
     grid-column-gap: 2rem;
     margin: 1rem 10%;
     font-family: Poppins, 'sans-serif';
+    // background-color: rgba(206, 206, 206, 0.3);
 
     .filter {
         min-width: 20rem;
+        background-color: $light;
+        // background-color: rgba(206, 206, 206, 0.3);
 
         //filter starts
         .filter-container {
-            // background-color: green; 
+            // background-color: rgba(206, 206, 206, 0.3);
             font-family: Poppins, 'sans-serif';
+            background-color: $light;
 
             /* margin: 1rem; */
             .filter-header {
@@ -404,9 +429,10 @@ footer {
                                 outline: none;
                                 border: 1px solid rgba(243, 243, 243, 0.3);
                                 margin-right: 0.5rem;
+                                cursor: pointer;
                             }
 
-                            input[type='checkbox']:checked{
+                            input[type='checkbox']:checked {
                                 // background-color: #fff;
                                 color: #fff;
                             }
@@ -415,10 +441,10 @@ footer {
                     }
                 }
             }
-            #filterBody{
+
+            #filterBody {
                 display: none;
             }
-
         }
 
         //filter ends
@@ -429,7 +455,6 @@ footer {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            // background-color: red;
 
             .showing {
                 font-size: 0.85rem;
@@ -444,24 +469,23 @@ footer {
 
             select {
                 font-size: 0.75rem;
-                background-color: rgba(243, 243, 243, 0.3);
+                background-color:rgba(199, 199, 199, 0.487);
                 padding: 0.3rem 1rem;
-                border-radius: 10px;
+                border-radius: 5px;
                 font-weight: 800;
                 margin-right: 1rem;
                 outline: none;
 
-                &:active, &:hover{
+                &:active,
+                &:hover {
                     cursor: pointer;
                 }
-
-
             }
 
         }
 
         .cards {
-            // background-color: yellow;
+            background-color: $light;
             // background-color: red;
         }
     }
@@ -525,6 +549,10 @@ footer {
         }
     }
 
+    .search-head {
+        margin: 1rem;
+    }
+
     .search-dir {
         margin: 1rem;
         grid-column-gap: 1rem;
@@ -544,12 +572,16 @@ footer {
 
 @media only screen and (max-width: 920px) {
 
-    .navbar{
-        .nav-logo{
-            .p{
+    .navbar {
+        .nav-logo {
+            .p {
                 display: none;
             }
         }
+    }
+
+    .search-head {
+        font-size: 1.5rem;
     }
 
 
@@ -591,7 +623,7 @@ footer {
                     }
                 }
 
-                #filterBody{
+                #filterBody {
                     display: none;
                 }
 

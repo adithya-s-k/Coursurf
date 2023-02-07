@@ -34,10 +34,7 @@ const Filter = () => {
         })
 
         const toggleFilter = document.getElementById("toggleFilter");
-        // const toggleFilter1 = document.getElementById("toggleFilter1");
         const body = document.getElementById("filterBody");
-
-        body.style.display = 'block';
 
         toggleFilter.addEventListener("click", function () {
             if (body.style.display === 'none') {
@@ -50,14 +47,16 @@ const Filter = () => {
             }
         })
 
-        
 
+        //set the filter display when the screen size changes
         window.onresize = (e) => {
             if (screen.width >= 920) {
                 body.style.display = 'block';
+                clear.style.display = 'block'
             }
             else {
                 body.style.display = 'none';
+                clear.style.display = 'none'
             }
         }
 
@@ -71,7 +70,7 @@ const Filter = () => {
                 <span id='toggleFilter'><MdToc className='filter-svgfilter' size={24} color={'#0a2540'} />Filter by</span>
                 <button id='clear'>Clear All</button>
             </div>
-            <div className='filter-body' id='filterBody' >
+            <div className='filter-body' id='filterBody' style={{ display: 'block' }}>
                 <div id='section1'>
                     <ul>
                         <li>
@@ -91,7 +90,7 @@ const Filter = () => {
                 <div id='section2'>
                     <h2>Level</h2>
                     <BsChevronDown className='icon' />
-                    <ul >
+                    <ul style={{ display: 'block' }}>
                         <li>
                             <input type='checkbox' className='input-c' /> <span>Beginner</span>
                         </li>
@@ -106,7 +105,7 @@ const Filter = () => {
                 <div id='section3'>
                     <h2>Duration</h2>
                     <BsChevronDown className='icon' />
-                    <ul >
+                    <ul style={{ display: 'block' }}>
                         <li>
                             <input type='checkbox' className='input-c' /> <span>1-5 hours</span>
                         </li>

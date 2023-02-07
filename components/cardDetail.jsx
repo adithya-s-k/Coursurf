@@ -64,8 +64,8 @@ const Carddetail = () => {
                     </p>
 
                     <div className={cardD.btns}>
-                        <button className={cardD.btn}>Button 1</button>
-                        <button className={cardD.btn}>Button 2</button>
+                        <button className={cardD.btn}>View Details</button>
+                        <button className={cardD.btn}>Go to Course</button>
                     </div>
                 </div>
             </div>

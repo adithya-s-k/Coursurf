@@ -8,8 +8,9 @@
     padding: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-family: Poppins, 'sans-serif';
-    transition:  all 0.5s ease;
-    color: #0a2540
+    transition: all 0.5s ease;
+    color: #0a2540;
+    background-color: #fff;
 }
 
 .container:hover {
@@ -107,7 +108,7 @@
 }
 
 .btns .btn {
-    border: 1px solid #FD8A45;
+    border: 1px solid rgba(142, 142, 142, 0.24);
     padding: 0.2rem 1rem;
     font-size: 0.8rem;
     border-radius: 5px;
@@ -117,8 +118,8 @@
 }
 
 .btns .btn:hover {
-    background-color: #FD8A45;
-    color: #fff;
+    border: 1.5px solid #FD8A45;
+    color: #222;
 }
 
 @media only screen and (max-width: 780px) {
@@ -126,7 +127,8 @@
         grid-template-columns: 1fr;
         border-radius: 10px 10px 0 0;
     }
-    .desc{
+
+    .desc {
         font-size: 0.75rem;
     }
 }
