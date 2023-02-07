@@ -30,13 +30,13 @@ function Search() {
                     <AiOutlineSearch />
                 </Link>
 
-                <input type="text" autoFocus className={search.input} ref={inputRef} placeholder="Search your next course" onChange={e => setQuery(e.target.value)} />
+                <input type="text" autoFocus className={search.input} ref={inputRef} placeholder="Search from over 10,000+ courses" onChange={e => setQuery(e.target.value)} />
                 <span className={search.cross}><RxCross2 onClick={clear} className={search.crossSvg} /></span>
-                <input type='submit' className={search.button}>
+                {/* <input type='submit' className={search.button}> */}
                     {/* <Link className={search.a} href={`/details/${query.split(' ').join('-')}`}>
                         Search
                     </Link> */}
-                </input>
+                {/* </input> */}
 
             </form>
         </div>

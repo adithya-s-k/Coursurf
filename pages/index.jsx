@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Card from '../components/cardMain';
 import Search from '../components/search';
 import { CardSkeleton } from '../components/skeleton';
+import Titles from '../components/Titles';
 
 export default function Home() {
   return (
@@ -12,15 +13,46 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Search />
-      <div className="card-container">
-        <CardSkeleton />
-        <CardSkeleton />
-        <CardSkeleton />
-        <Card />
-        <Card />
-        <Card />
-      </div>
+      <section id='hero-section'>
+        <div className="content">
+          <h1>Let's get you a new course</h1>
+          <Search />
+        </div>
+      </section>
+      <section id="trending-courses">
+        <Titles certificate="Master's and Bachelor's Degrees" heading="Find a top degree that fits your life" desc="Breakthrough pricing on 100% online degrees from top universities." />
+        <div className="card-container">
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </section>
+
+      <section id='institutions'>
+        <Titles certificate="Courses and Specializations"
+         heading="Advance your career with new skills"
+         desc="Choose from over 4,000 courses in topics like business analytics, graphic design, Python, and more." />
+        <div className="card-container">
+          <CardSkeleton />
+          <Card />
+          <CardSkeleton />
+          <CardSkeleton />
+          <CardSkeleton />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+
+      </section>
+
     </div>
   );
 }

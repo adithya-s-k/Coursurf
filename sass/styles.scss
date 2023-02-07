@@ -24,6 +24,7 @@
     background-color: $dark;
 }
 
+
 .navbar {
     @include font($fontSize: .8rem);
     @include flexBox;
@@ -49,7 +50,7 @@
             @include flexBox($cGap: 2rem);
             column-gap: 1rem;
             padding-left: 1rem;
-            
+
             a {
                 svg {
                     display: none;
@@ -83,7 +84,7 @@
             padding: 0.3rem 1.2rem;
             transition: $transition;
             border: 2px solid transparent;
-            
+
             &:hover {
                 color: #333;
                 border: 2px solid $primary;
@@ -111,6 +112,7 @@
                 left: 0;
                 top: 3.84rem;
                 width: 100%;
+                // min-height: calc( 50vh - 3.84rem );
                 background-color: $light;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
@@ -126,6 +128,7 @@
                     margin: 4px;
                     border: 2px solid transparent;
                     border-radius: 5px;
+                    font-size: 0.9rem;
 
                     &:hover {
                         color: #333;
@@ -136,8 +139,6 @@
         }
     }
 }
-
-
 
 footer {
     display: grid;
@@ -218,156 +219,274 @@ footer {
     }
 }
 
-.card-container {
+#hero-section {
+    min-height: calc(100vh - 6rem);
+    transform: translateY(-10%);
+    // background-color: red;
     @include flexBox;
-    gap: 1.5rem;
-    transition: $transition;
-    margin: 3rem 2rem;
+    font-family: Poppins;
 
-    .card {
-        position: relative;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-        height: 30rem;
-        width: 20rem;
-        background-color: rgba(239, 239, 239, 0.24);
-        border-radius: 1rem;
-        overflow: hidden;
+    .content {
+        @include flexBox($flexDirection: column, $rGap: 1rem);
+        // background-color: yellowgreen;
+        width: 100%;
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            font-weight: 600;
+            margin: 0 2rem;
+        }
+    }
+}
+
+#institutions {
+    font-family: $fontMain, sans-serif;
+
+    .title-box {
+        margin: 0 5rem;
+
+        .certificate {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $primary;
+        }
+
+        .heading {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
+        }
+
+        .desc {
+            font-size: 1.2rem
+        }
+    }
+
+    .card-container {
+        @include flexBox;
+        gap: 1.5rem;
         transition: $transition;
+        margin: 3rem 2rem;
+    }
+}
 
-        &:hover {
-            .top {
-                .card-img {
-                    height: 5rem;
-                }
-            }
+
+#trending-courses {
+    font-family: $fontMain, sans-serif;
+
+    .title-box {
+        margin: 0 5rem;
+
+        .certificate {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: $primary;
         }
 
-
-        .top {
-            .card-img {
-                height: 11.5rem;
-                object-fit: cover;
-                transition: $transition;
-            }
-
-            .course-provider-logo {
-                position: relative;
-                background-color: #fff;
-                bottom: -10%;
-                top: -20px;
-                left: 85%;
-                padding: 0.2rem;
-                border-radius: 4px;
-                border: 1px solid $light;
-            }
+        .heading {
+            margin: 0.5rem 0;
+            font-size: 2.5rem;
         }
 
-        .bottom {
-            padding: 0rem 0.8rem;
-            margin-top: -1rem;
-            // overflow: scroll;
+        .desc {
+            font-size: 1.2rem
+        }
+    }
 
-            .title {
-                @include font($fontSize: 0.9rem, $px: 0, $py: 0);
-                padding: 0.3rem 0;
+    .card-container {
+        @include flexBox;
+        gap: 1.5rem;
+        transition: $transition;
+        margin: 3rem 2rem;
+    }
+}
+
+.search-head {
+    font-family: $fontMain, 'sans-serif';
+    margin: 1rem 10%;
+    // background-color: red;
+    font-size: 2.2rem;
+    padding: 1rem 0 1.5rem 0;
+    border-bottom: 1px solid rgba(199, 199, 199, 0.487);
+
+    .search-count {
+        display: block;
+        width: 8rem;
+        text-align: center;
+        font-size: 0.75rem;
+        background-color: rgba(199, 199, 199, 0.487);
+        padding: 0.3rem 1rem;
+        border-radius: 5px;
+        font-weight: 800;
+        margin-right: 1rem;
+        outline: none;
+    }
+}
+
+.search-dir {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    grid-column-gap: 2rem;
+    margin: 1rem 10%;
+    font-family: Poppins, 'sans-serif';
+    // background-color: rgba(206, 206, 206, 0.3);
+
+    .filter {
+        min-width: 20rem;
+        background-color: $light;
+        // background-color: rgba(206, 206, 206, 0.3);
+
+        //filter starts
+        .filter-container {
+            // background-color: rgba(206, 206, 206, 0.3);
+            font-family: Poppins, 'sans-serif';
+            background-color: $light;
+
+            /* margin: 1rem; */
+            .filter-header {
+                margin: 0.8rem 1rem;
+                display: flex;
+                column-gap: 0.5rem;
+                font-size: 0.85rem;
                 font-weight: 500;
-            }
+                justify-content: space-between;
+                align-items: center;
 
-
-            .course-badges {
-                margin-bottom: 0.5rem;
-
-                .tag {
-                    @include font($py: 0, $px: 0.3rem, $fontSize: 0.65rem);
-                    border: 1px solid $primary;
-                    border-radius: 10px;
-                    padding-left: 0.5rem;
-                    padding-right: 0.5rem;
-                    margin-right: 0.5rem;
-                    display: inline-block;
-                    transition: $transition;
-                    outline: 2px solid transparent;
+                span {
+                    .filter-svgfilter {
+                        display: inline-block;
+                        margin-right: 0.4rem;
+                    }
                 }
 
-                .star {
-                    font-weight: bold;
-                    background-color: $primary;
-                    color: $light;
+                #toggleFilter {
+                    display: none;
                 }
-            }
 
-            .provider {
-                font-weight: 600;
-            }
-
-            .desc {
-                @include font($fontSize: 0.75rem, $px: 0, $py: 0.3rem);
-                font-weight: 300;
-                // overflow-y: hidden;
-                // overflow-x: hidden;
-                overflow: hidden;
-            }
-
-            .readmore {
-                margin-top: 0.5rem;
-                border: 2px solid $primary;
-                background-color: $primary;
-                border-radius: 5px;
-                font-size: 0.8rem;
-                font-weight: 700;
-                padding: 0.2rem 0.8rem;
-                color: $light;
-                transition: $transition;
-
-                &:hover {
-                    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                }
-            }
-
-            .btns {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                padding: 0.8rem 0;
-                width: 100%;
-                @include flexBox;
-                background-color: $light;
-                z-index: 2;
-                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-
-                .price {
-                    border: 2px solid $primary;
-                    border-radius: 5px;
-                    padding: 0.2rem 0.8rem;
+                button {
                     color: $primary;
-                    font-weight: 700;
-                    font-size: 0.8rem;
-                    transition: $transition;
+                    font-size: 0.65rem;
+                    border-radius: 20px;
+                    padding: 0.1rem 0.5rem;
+                    background-color: #d4d4d47c;
+                }
+            }
 
-                    &:hover {
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            .filter-body {
+                margin-top: 0.9rem;
+                // background-color: red;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+                // height: 40vh;
+                border-radius: 10px;
+                font-size: 1rem;
+
+                #section1,
+                #section2,
+                #section3,
+                #section4,
+                #section5 {
+                    position: relative;
+                    padding: 1rem;
+                    border-bottom: 1px solid rgba(206, 206, 206, 0.3);
+
+                    h2 {
+                        margin: 0.2rem 0;
+                        font-weight: 500;
+                    }
+
+                    .icon {
+                        position: absolute;
+                        right: 1rem;
+                        top: 1.3rem;
+                        transition: $transition;
+                        transform: rotate(-90deg);
+                    }
+
+                    .active,
+                    .icon:hover {
+                        background-color: rgba(243, 243, 243, 0.3);
+                        transform: rotate(0deg);
+                        cursor: pointer;
+                    }
+
+                    ul {
+                        display: block;
+                        transition: $transition;
+
+                        li {
+                            font-size: 0.8rem;
+                            line-height: 140%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding: 0.2rem;
+
+                            input[type='checkbox'] {
+                                accent-color: $primary;
+                                height: 1.2rem;
+                                width: 1.2rem;
+                                outline: none;
+                                border: 1px solid rgba(243, 243, 243, 0.3);
+                                margin-right: 0.5rem;
+                                cursor: pointer;
+                            }
+
+                            input[type='checkbox']:checked {
+                                // background-color: #fff;
+                                color: #fff;
+                            }
+
+                        }
                     }
                 }
+            }
 
-                .site-btn {
-                    border: 2px solid $primary;
-                    background-color: $primary;
-                    border-radius: 5px;
-                    font-size: 0.8rem;
-                    font-weight: 700;
-                    padding: 0.2rem 0.8rem;
-                    color: $light;
-                    transition: $transition;
-
-                    &:hover {
-                        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-                    }
-                }
+            #filterBody {
+                display: none;
             }
         }
 
-        &:hover {
-            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        //filter ends
+    }
+
+    main {
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .showing {
+                font-size: 0.85rem;
+                font-weight: 500;
+                margin: 1rem;
+
+                b {
+                    font-size: 0.8rem;
+                    margin-left: 0.4rem;
+                }
+            }
+
+            select {
+                font-size: 0.75rem;
+                background-color:rgba(199, 199, 199, 0.487);
+                padding: 0.3rem 1rem;
+                border-radius: 5px;
+                font-weight: 800;
+                margin-right: 1rem;
+                outline: none;
+
+                &:active,
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+        }
+
+        .cards {
+            background-color: $light;
+            // background-color: red;
         }
     }
 }
@@ -394,13 +513,160 @@ footer {
                     @include flexBox ($cGap: 2rem);
                 }
             }
+        }
+    }
 
+    #hero-section {
+
+        .content {
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    #trending-courses,
+    #institutions {
+
+        .title-box {
+            margin: 0 2rem;
+            font-family: $fontMain, sans-serif;
+
+            .certificate {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+
+            .heading {
+                margin: 0.3rem 0;
+                font-size: 1.5rem;
+            }
+
+            .desc {
+                font-size: 1rem
+            }
+        }
+    }
+
+    .search-head {
+        margin: 1rem;
+    }
+
+    .search-dir {
+        margin: 1rem;
+        grid-column-gap: 1rem;
+
+        .filter {
+            min-width: 14rem;
+            // background-color: green;
+
+            .filter-container {
+                font-family: Poppins, 'sans-serif';
+            }
         }
     }
 }
 
-
 //  media
+
+@media only screen and (max-width: 920px) {
+
+    .navbar {
+        .nav-logo {
+            .p {
+                display: none;
+            }
+        }
+    }
+
+    .search-head {
+        font-size: 1.5rem;
+    }
+
+
+    .search-dir {
+        grid-template-columns: 1fr;
+
+        .filter {
+            // min-width: 13rem;
+
+            .filter-container {
+                // background-color: green;
+                font-family: Poppins, 'sans-serif';
+
+                /* margin: 1rem; */
+                .filter-header {
+                    display: flex;
+                    justify-content: space-between;
+
+                    span {
+                        display: none;
+                    }
+
+                    #toggleFilter {
+                        display: inline-block;
+                        background-color: rgba(243, 243, 243, 0.3);
+                        // background-color: red;
+                        padding: 0.4rem 0.5rem;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: all 0.3s eases;
+
+                        &:hover {
+                            background-color: rgba(206, 206, 206, 0.3);
+                        }
+                    }
+
+                    button {
+                        // display: none;
+                    }
+                }
+
+                #filterBody {
+                    display: none;
+                }
+
+                .filter-body {
+                    display: none;
+                    margin-top: 0.9rem;
+                    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                    // height: 40vh;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    font-size: 1rem;
+
+                    #section1,
+                    #section2,
+                    #section3,
+                    #section4,
+                    #section5 {
+                        ul {
+                            li {
+                                font-size: 0.8rem;
+                                line-height: 140%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: flex-start;
+                                padding: 0.2rem;
+
+                                input[type='checkbox'] {
+                                    accent-color: $primary;
+                                    height: 1.2rem;
+                                    width: 1.2rem;
+                                    outline: none;
+                                    border: 1px solid rgba(243, 243, 243, 0.3);
+                                    margin-right: 0.5rem;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (max-width: 660px) {
 
@@ -425,7 +691,6 @@ footer {
     }
 
     footer {
-
 
         .footer-right {
             grid-column-end: span 5;
@@ -475,11 +740,53 @@ footer {
         }
     }
 
-
     .card-container {
         .card {
             height: 28rem;
             width: 18rem;
+
+            .bottom {
+
+                .platform {
+                    padding: 00rem 0;
+                }
+            }
         }
     }
+
+    #hero-section {
+
+        .content {
+
+            h1 {
+                font-size: 1.6em;
+            }
+        }
+    }
+
+    #trending-courses,
+    #institutions {
+
+        .title-box {
+            margin: 0 2rem;
+            font-family: $fontMain, sans-serif;
+
+            .certificate {
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+
+            .heading {
+                margin: 0.3rem 0;
+                font-size: 1.5rem;
+            }
+
+            .desc {
+                font-size: 1rem
+            }
+
+        }
+    }
+
+    .search-dir {}
 }

@@ -5,6 +5,13 @@ import { BsInstagram } from 'react-icons/bs'
 import { FiMail } from 'react-icons/fi'
 import { h1Variants, linkVariants } from './Variants'
 
+// import { Oswald } from '@next/font/google'
+
+// const oswald = Oswald({
+//   weight: ['200','300','400','500','600','700'],
+//   subsets : ['latin']
+// })
+
 const Footer = () => {
     return (
         <footer>
