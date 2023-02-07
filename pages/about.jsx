@@ -1,5 +1,5 @@
-import React from 'react'
-import carddetails from '../components/carddetails'
+import React from 'react';
+import carddetails from '../components/cardDetail';
 
 const about = () => {
   return (
@@ -7,8 +7,7 @@ const about = () => {
       about
       <carddetails />
     </div>
+  );
+};
 
-  )
-}
-
-export default about
+export default about;
