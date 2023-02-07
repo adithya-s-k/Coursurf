@@ -50,6 +50,17 @@ const Filter = () => {
             }
         })
 
+        
+
+        window.onresize = (e) => {
+            if (screen.width >= 920) {
+                body.style.display = 'block';
+            }
+            else {
+                body.style.display = 'none';
+            }
+        }
+
 
     }, [])
 
