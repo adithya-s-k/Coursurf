@@ -18,7 +18,18 @@ const dev = () => {
                     <Filter />
                 </div>
                 <main>
-                    <div className='showing'>Showing <b>{1515} courses</b></div>
+                    <div className='card-header'>
+                        <div className='showing'>Showing <b>{1515} courses</b></div>
+
+                        <select name="category" id="cars" placeholder='Sort by Relevency'>
+                            {/* <option value selected>Sort by Relevency</option> */}
+                            <option value="relevency">Relevency</option>
+                            <option value="rated-up">Highest Rated</option>
+                            <option value="rated-down">Lowest Rated</option>
+                            <option value="created-up">Most Recently Added</option>
+                        </select>
+                    
+                    </div>
                     <div className='cards'>
                         <CardDetail />
                         <CardDetailSkeleton />

@@ -35,7 +35,7 @@ const Navbar = () => {
     <nav className='navbar'>
       <motion.div className='nav-logo'>
         <img src="image2.png" alt="logo" height={30} width={30} />
-        <p>Coursurf</p>
+        <p className='p'>Coursurf</p>
         <HStack className='nav-pagelinks'>
           <Link href='/'><p>Home</p></Link>
           <Link href='/'><BsSearch className='nav-images' size={18} /><p>Search</p></Link>

@@ -32,14 +32,25 @@ const Filter = () => {
                 input[i].checked = false;
             }
         })
-        // console.log(input)
 
         const toggleFilter = document.getElementById("toggleFilter");
+        // const toggleFilter1 = document.getElementById("toggleFilter1");
         const body = document.getElementById("filterBody");
+
+        body.style.display = 'block';
+
         toggleFilter.addEventListener("click", function () {
-            if (body.style.display === 'none') body.style.display = 'block';
-            else body.style.display = ' none';
+            if (body.style.display === 'none') {
+                body.style.display = 'block';
+                clear.style.display = 'block'
+            }
+            else {
+                body.style.display = ' none';
+                clear.style.display = 'none'
+            }
         })
+
+
     }, [])
 
     return (
@@ -49,7 +60,7 @@ const Filter = () => {
                 <span id='toggleFilter'><MdToc className='filter-svgfilter' size={24} color={'#0a2540'} />Filter by</span>
                 <button id='clear'>Clear All</button>
             </div>
-            <div className='filter-body' id='filterBody' style={{ display: 'block' }}>
+            <div className='filter-body' id='filterBody' >
                 <div id='section1'>
                     <ul>
                         <li>
@@ -69,36 +80,30 @@ const Filter = () => {
                 <div id='section2'>
                     <h2>Level</h2>
                     <BsChevronDown className='icon' />
-                    <ul style={{ display: 'block' }}>
+                    <ul >
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Beginner</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Intermediate</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
-                        </li>
-                        <li>
-                            <input type='checkbox' className='input-c' /> <span>University course only</span>
+                            <input type='checkbox' className='input-c' /> <span>Advanced</span>
                         </li>
                     </ul>
                 </div>
                 <div id='section3'>
                     <h2>Duration</h2>
                     <BsChevronDown className='icon' />
-                    <ul style={{ display: 'block' }}>
+                    <ul >
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>1-5 hours</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>5-10 hours</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
-                        </li>
-                        <li>
-                            <input type='checkbox' className='input-c' /> <span>University course only</span>
+                            <input type='checkbox' className='input-c' /> <span>10+ hours</span>
                         </li>
                     </ul>
                 </div>
@@ -107,16 +112,25 @@ const Filter = () => {
                     <BsChevronDown className='icon' />
                     <ul style={{ display: 'block' }}>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Programming</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Computer Science</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Data Science</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>University course only</span>
+                            <input type='checkbox' className='input-c' /> <span>Information Security</span>
+                        </li>
+                        <li>
+                            <input type='checkbox' className='input-c' /> <span>Business</span>
+                        </li>
+                        <li>
+                            <input type='checkbox' className='input-c' /> <span>Mathematics</span>
+                        </li>
+                        <li>
+                            <input type='checkbox' className='input-c' /> <span>Engineering</span>
                         </li>
                     </ul>
                 </div>
@@ -125,16 +139,22 @@ const Filter = () => {
                     <BsChevronDown className='icon' />
                     <ul style={{ display: 'block' }}>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>English</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Arabic</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>With certificate</span>
+                            <input type='checkbox' className='input-c' /> <span>Bengali</span>
                         </li>
                         <li>
-                            <input type='checkbox' className='input-c' /> <span>University course only</span>
+                            <input type='checkbox' className='input-c' /> <span>Chinese</span>
+                        </li>
+                        <li>
+                            <input type='checkbox' className='input-c' /> <span>French</span>
+                        </li>
+                        <li>
+                            <input type='checkbox' className='input-c' /> <span>German</span>
                         </li>
                     </ul>
                 </div>
