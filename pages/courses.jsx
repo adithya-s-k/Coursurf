@@ -69,14 +69,14 @@ function cousres() {
           </div>
           <div className="rev">
             <div className="ek">
-              <button class="buttone glow-button">Add To List</button>
+              <button class="buttone glow-buutton">Add To List</button>
             </div>
             <div className="do">
-              <button class="buttone glow-button">Write Review</button>
+              <button class="buttone glow-buutton">Write Review</button>
             </div>
             <div className="ten">
               {" "}
-              <button class="buttone glow-button">Mark Complete</button>
+              <button class="buttone glow-buutton">Mark Complete</button>
             </div>
           </div>
           <span className="twos"></span>

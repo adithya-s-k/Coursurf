@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <motion.div className="nav-logo">
-        <Image src="image2.png" alt="logo" height={30} width={30} />
+        <Image src="/image2.png" alt="logo" height={30} width={30} />
         <p className="p">Coursurf</p>
         <HStack className="nav-pagelinks">
           <Link href="/">
