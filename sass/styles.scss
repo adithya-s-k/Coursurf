@@ -790,3 +790,246 @@ footer {
 
     .search-dir {}
 }
+
+.uni {
+    position: relative;
+    bottom: 20px;
+}
+
+.one {
+    background-color: #F5F5F5;
+    height: 45%;
+    width: 60%;
+    position: relative;
+    left: 110px;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.two {
+    background-color: #F5F5F5;
+    height: 50%;
+    width: 30%;
+    position: relative;
+    left: 180px;
+    border-radius: 5px;
+}
+
+.Maine {
+    display: flex;
+    height: 50%;
+    width: 90%;
+    .div {
+        display: inline-block;
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.title_uni_size {
+    color: #444444;
+    // background-color: #FF5F15;
+    @include font($fontFamily: $fontFooter);
+    size: 300px;
+    font-size: 40px;
+    font-weight: 800;
+    position: relative;
+    bottom: 30px;
+    right: 10px;
+}
+
+.title_uni_sizE {
+    position: relative;
+    bottom: 30px;
+    left: 10px;
+}
+
+.ratings {
+    position: relative;
+    bottom: 40px;
+    left: 10px;
+}
+
+.buutton {
+    background-color: #FF5F15;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    @include font($fontFamily: $fontFooter);
+}
+
+.glow-buutton:hover {
+    color: #FFAA33;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+}
+
+.rev {
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    // align-content: space-between;
+    // align-items: center;
+}
+
+.twos {
+    background-color: white;
+}
+
+.two {
+    padding: 25px;
+}
+
+.buttonss {
+    background-color: #FF5F15;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    @include font($fontFamily: $fontFooter);
+    border-radius: 5px;
+    width: 80%;
+}
+
+.glow-buttonss:hover {
+    color: #ffff8f;
+    box-shadow: #fada5e;
+}
+
+.play {
+    align-items: center;
+    position: relative;
+    left: 40px;
+    top: 5px;
+}
+
+.line {
+    height: 1px;
+    border-width: 0;
+    color: gray;
+    background-color: gray;
+}
+
+.linee {
+    height: 1px;
+    border-width: 0;
+    color: black;
+    background-color: gray;
+    position: relative;
+    bottom: 11px;
+}
+
+.texts {
+    text-align: center;
+    @include font($fontFamily: $fontFooter);
+    font-family: 'Poppins';
+    font-size: medium;
+    border: 0.2px groove;
+    vertical-align: baseline;
+    position: relative;
+    top: 5px;
+}
+
+.three {
+    position: relative;
+    left: 10px;
+    background-color: #F5F5F5;
+    height: 50%;
+    width: 54%;
+    bottom: 170px;
+    left: 110px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.he {
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+
+.hes {
+    font-family: 'Poppins';
+    color: blue;
+    position: relative;
+    left: 10px;
+}
+
+.Info {
+    position: relative;
+    left: 10px;
+    font-family: 'Poppins';
+}
+
+#moreText {
+    display: none;
+}
+
+.Syllabus {
+    position: relative;
+    left: 10px;
+    background-color: #F5F5F5;
+    height: 50%;
+    width: 54%;
+    bottom: 90px;
+    left: 110px;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: 'Poppins';
+}
+
+.hea {
+    position: relative;
+    font-family: 'Poppins';
+}
+
+.sub {
+    position: relative;
+    font-family: 'Poppins';
+    left: 10px;
+}
+
+.ek {
+    position: relative;
+    @include font($fontFamily: $fontFooter);
+    font-size: small;
+}
+
+.do {
+    position: relative;
+    @include font($fontFamily: $fontFooter);
+    font-size: small;
+    right: 20px;
+}
+
+.ten {
+    position: relative;
+    @include font($fontFamily: $fontFooter);
+    font-size: small;
+    right: 40px;
+}
+
+.buttone {
+    font-family: 'Poppins';
+    border: 0.5px groove;
+    border-color: orangered;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.ratings {
+    position: relative;
+    bottom: 23px;
+}

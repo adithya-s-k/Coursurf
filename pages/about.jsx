@@ -1,13 +1,9 @@
-import React from 'react';
-import carddetails from '../components/cardDetail';
+import React from 'react'
 
 const about = () => {
   return (
-    <div>
-      about
-      <carddetails />
-    </div>
-  );
-};
+    <div>about</div>
+  )
+}
 
-export default about;
+export default about
