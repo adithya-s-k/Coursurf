@@ -6,33 +6,34 @@ import React from 'react';
 import { AiFillHome, AiOutlineAlignRight } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
 import { RxCross1 } from 'react-icons/rx';
+import Image from "next/image";
 
 const Navbar = () => {
   const mobileView = () => {
-    const mv = document.getElementById('mv');
-    const toggle = document.getElementById('switch');
-    const cross = document.getElementById('cross');
-    const ham = document.getElementById('ham');
+    const mv = document.getElementById("mv");
+    const toggle = document.getElementById("switch");
+    const cross = document.getElementById("cross");
+    const ham = document.getElementById("ham");
 
-    if (toggle.innerText === 'ON') {
-      toggle.innerText = 'OFF';
-      mv.style.display = 'none';
-      cross.style.display = 'none';
-      ham.style.display = 'block';
-      mv.style.height = '0';
+    if (toggle.innerText === "ON") {
+      toggle.innerText = "OFF";
+      mv.style.display = "none";
+      cross.style.display = "none";
+      ham.style.display = "block";
+      mv.style.height = "0";
     } else {
-      ham.style.display = 'none';
-      cross.style.display = 'block';
-      toggle.innerText = 'ON';
-      mv.style.display = 'block';
-      mv.style.height = 'calc( 50vh - 3.84rem )';
+      ham.style.display = "none";
+      cross.style.display = "block";
+      toggle.innerText = "ON";
+      mv.style.display = "block";
+      mv.style.height = "calc( 50vh - 3.84rem )";
     }
   };
 
   return (
     <nav className="navbar">
       <motion.div className="nav-logo">
-        <img src="image2.png" alt="logo" height={30} width={30} />
+        <Image src="image2.png" alt="logo" height={30} width={30} />
         <p className="p">Coursurf</p>
         <HStack className="nav-pagelinks">
           <Link href="/">
@@ -59,7 +60,7 @@ const Navbar = () => {
           <RxCross1 id="cross" color="#333" size={26} />
           <motion.div
             layout
-            animate={{ type: 'spring' }}
+            animate={{ type: "spring" }}
             className="mobile-links"
             id="mv"
           >

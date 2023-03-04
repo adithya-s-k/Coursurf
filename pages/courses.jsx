@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 import ReactStars from "react-stars";
 function toggleText() {
@@ -39,11 +40,12 @@ function cousres() {
         <div className="one">
           <div className="Uni">
             {/* <h1>hello</h1> */}
-            <img
-              src="https://1000logos.net/wp-content/uploads/2018/08/University-of-Michigan-Logo.png"
-              height="300px"
-              width="200px"
-            ></img>
+            <Image
+              src="/../public/mic.png"
+              alt="NOT FOUND"
+              height={300}
+              width={200}
+            />
           </div>
           <div className="title_uni">
             <div className="title_uni_size">
@@ -117,11 +119,10 @@ function cousres() {
             <br /> German, Russian, English, Spanish, Korean, Ukrainian
             <br />
             <br />
-            
           </div>
         </div>
       </div>
-    <div className="three">
+      <div className="three">
         <div className="he">
           Overview
           <hr className="line" />
@@ -219,11 +220,11 @@ function cousres() {
         <br />
 
         <div className="sub">
-          Through this course you'll learn and practice the strategies and
+          Through this course youll learn and practice the strategies and
           skills that will help you become a successful negotiator in your
           personal life and business transactions. After completing this module,
-          you'll be able to state the four key stages of negotiation and what
-          you need to do successfully complete this course.
+          youll be able to state the four key stages of negotiation and what
+          you need to do successfully complete this course
         </div>
         <br />
         <div className="hea">Prepare: Plan Your Negotiation Strategy</div>
@@ -231,8 +232,8 @@ function cousres() {
 
         <div className="sub">
           This module focuses on the first step in the negotiation process -
-          planning for a negotiation. One critical component you'll learn is how
-          to complete a negotiation analysis to set you up for success.
+          planning for a negotiation. One critical component you&#39;ll learn is how
+          to complete a negotiation analysis to set you up for success
         </div>
         <br />
         <div className="hea">Negotiate: Use Key Tactics for Success</div>
@@ -241,8 +242,8 @@ function cousres() {
         <div className="sub">
           This module focuses on two especially important topics: (1) how to use
           power during negotiations and (2) psychological tools that you can use
-          during negotiations. Keep a paper and pencil handy, as you'll be
-          participating in several experiments as watch these videos!
+          during negotiations. Keep a paper and pencil handy, as youll be
+          participating in several experiments as watch these videos &apos;
         </div>
         <br />
         <div className="hea">Close: Create a Contract</div>
@@ -250,8 +251,8 @@ function cousres() {
 
         <div className="sub">
           This module focuses on the negotiation that takes place in a business
-          deal after reaching an initial agreement – the negotiation to create a
-          binding contract. Among other things, you'll learn to decide if you
+          deal after reaching an initial agreement the negotiation to create a
+          binding contract. Among other things, youll learn to decide if you
           need a lawyer or can act as your own for contract creation. However,
           the videos should not be construed as providing legal advice.
         </div>
