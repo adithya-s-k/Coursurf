@@ -72,7 +72,7 @@ const Carddetail = (props) => {
 
           <div className={cardD.btns}>
             <button className={cardD.btn}>View Details</button>
-          <a href={props.link}> <button className={cardD.btn} >Go to Course</button></a> 
+          <a href={props.key}> <button className={cardD.btn} >Go to Course</button></a> 
           </div>
         </div>
       </div>

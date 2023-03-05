@@ -5,7 +5,7 @@ import Filter from "../components/filter";
 import { CardDetailSkeleton } from "../components/skeleton";
 import axios from "axios";
 
-const dev = () => {
+const Dev = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
@@ -56,7 +56,7 @@ const dev = () => {
             <CardDetail /> */}
             {data.map((ite) => (
               <CardDetail
-                link={ite.Cl}
+                key={ite.Cl}
                 title={ite.Cn}
                 content={ite.Cc}
                 provider={ite.Cp}
@@ -77,7 +77,7 @@ const dev = () => {
   );
 };
 
-export default dev;
+export default Dev;
 
 
   
