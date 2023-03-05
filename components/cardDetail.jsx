@@ -6,34 +6,38 @@ import { AiFillStar } from 'react-icons/ai';
 import { BsStack, BsCalendar3Event } from 'react-icons/bs';
 import { IoSpeedometerOutline } from 'react-icons/io';
 
-const Carddetail = () => {
+const Carddetail = (props) => {
   const features = [
     {
-      type: 'platform',
-      value: 'Coursera',
+      type: "platform",
+      value: props.provider,
       available: true,
       // icon: '<BsStack />'
     },
     {
-      type: 'mode',
-      value: 'Flexible',
+      type: "mode",
+      value: "Flexible",
       // icon: '<BsCalendar3Event />',
       available: true,
     },
     {
-      type: 'duration',
-      value: '19 hours worth of material, 7 weeks long',
+      type: "duration",
+      value: props.duration,
       available: true,
       // icon: '<IoSpeedometerOutline />'
     },
     {
-      type: 'start-date',
-      value: '23 Feb 2023',
+      type: "start-date",
+      value: "23 Feb 2023",
       available: true,
     },
     {
-      type: 'comment',
+      type: "comment",
       available: false,
+    },
+    {
+      type: "pricing",
+      value: props.pricing,
     },
   ];
 
@@ -52,30 +56,23 @@ const Carddetail = () => {
             />
           </div>
           <div className={cardD.topRight}>
-            <div className={cardD.provider}>SpringBoard</div>
-            <h2 className={cardD.heading}>
-              Become a full stack developer or your money back.
-            </h2>
+            <div className={cardD.provider}>{props.provider}</div>
+            <h2 className={cardD.heading}>{props.title}</h2>
             <div className={cardD.review}>
               <span>
                 <span>4.5</span>
-                <AiFillStar style={{ color: '#F2D049', display: 'inline' }} />
+                <AiFillStar style={{ color: "#F2D049", display: "inline" }} />
               </span>
               <span>1641 reviews</span>
             </div>
           </div>
         </div>
         <div className={cardD.bottom}>
-          <p className={cardD.desc}>
-            Go from beginner to full stack developer at your pace in this remote
-            bootcamp. Our courses don &apos t stop at graduation, get 1:1
-            mentorship and career coaching from day one of the course, until the
-            first day of your new job - or your money back.
-          </p>
+          <p className={cardD.desc}>{props.content}</p>
 
           <div className={cardD.btns}>
             <button className={cardD.btn}>View Details</button>
-            <button className={cardD.btn}>Go to Course</button>
+          <a href={props.link}> <button className={cardD.btn} >Go to Course</button></a> 
           </div>
         </div>
       </div>
