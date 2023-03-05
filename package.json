@@ -25,7 +25,8 @@
     "react-icons": "^4.7.1",
     "react-loading-skeleton": "^3.1.0",
     "react-stars": "^2.2.5",
-    "sass": "^1.57.1"
+    "sass": "^1.57.1",
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
