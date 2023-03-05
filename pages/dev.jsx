@@ -9,7 +9,7 @@ const dev = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-      axios.get('/api/hello')
+      axios.get('/api/Filter_Course')
         .then(res => setData(res.data))
         .catch(err => console.log(err));
     }, []);
