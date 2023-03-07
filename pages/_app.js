@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ChakraProvider>
         <AnimatePresence mode="wait" initial={false} />
-        <Navbar />
+        {/* <Navbar /> */}
         <Component {...pageProps} />
         <Footer />
       </ChakraProvider>
