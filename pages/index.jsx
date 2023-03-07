@@ -3,7 +3,7 @@ import Card from '../components/cardMain';
 import Navbar from '../components/navbar';
 import Search from '../components/search';
 import { CardSkeleton } from '../components/skeleton';
-import Titles from '../components/titles';
+import Titles from '../components/Titles';
 
 import Provider from '../components/provider';
 import Link from 'next/link';
