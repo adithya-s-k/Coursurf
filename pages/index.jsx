@@ -1,10 +1,8 @@
 import Head from 'next/head';
 import Card from '../components/cardMain';
-import Navbar from '../components/navbar';
 import Search from '../components/search';
 import { CardSkeleton } from '../components/skeleton';
 import Titles from '../components/Titles';
-
 import Provider from '../components/provider';
 import Link from 'next/link';
 
@@ -20,7 +18,6 @@ export default function Home() {
           content="Coursurf is the ultimate online platform for finding and comparing courses from top providers. With Coursurf, you can easily search and compare courses based on your interests, budget, and learning goals. Whether you're looking to upskill in a new subject, enhance your career prospects, or simply follow a personal passion, Coursurf provides you with all the information you need to make informed decisions about your education. Our website aggregates courses from leading providers, so you can compare options and find the perfect course for you. Get started today and take the first step towards reaching your educational goals."
         />
       </Head>
-      <Navbar />
 
       <section id="hero-section">
         <div className="content">
