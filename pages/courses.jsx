@@ -39,7 +39,6 @@ function cousres() {
       <div className="Maine">
         <div className="one">
           <div className="Uni">
-            {/* <h1>hello</h1> */}
             <Image
               src="/../public/mic.png"
               alt="NOT FOUND"
@@ -64,7 +63,7 @@ function cousres() {
               count={5}
               onChange={ratingchanged}
               size={50}
-              color2={'#ffd700'}
+              color2={"#ffd700"}
             />
           </div>
           <div className="rev">
@@ -75,7 +74,7 @@ function cousres() {
               <button className="buttone glow-buutton">Write Review</button>
             </div>
             <div className="ten">
-              {' '}
+              {" "}
               <button className="buttone glow-buutton">Mark Complete</button>
             </div>
           </div>
@@ -152,7 +151,7 @@ function cousres() {
             <br /> <br />I hope that you will join the hundreds of thousands of
             learners who have made “Successful Negotiation” one of the most
             popular and highly-rated MOOCs worldwide. In the course, you’ll
-            learn about and practice the four steps to a successful negotiation:{' '}
+            learn about and practice the four steps to a successful negotiation:{" "}
             <br />
             <br />
             (1) Prepare: Plan Your Negotiation Strategy <br /> <br />
@@ -176,7 +175,7 @@ function cousres() {
             partner will give you feedback on your negotiation skills. To assist
             you with your negotiations, I have developed several free
             negotiating planning tools that are related to the course. These
-            tools and a free app are available at http://negotiationplanner.com/{' '}
+            tools and a free app are available at http://negotiationplanner.com/{" "}
             <br /> <br />
             (3) Take the final exam. To successfully complete the course, you
             must answer 80% of the questions correctly. The exam is a Mastery
