@@ -56,12 +56,12 @@ const Dev = () => {
             <CardDetail /> */}
             {data.map((ite) => (
               <CardDetail
-                key={ite.Cl}
-                title={ite.Cn}
-                content={ite.Cc}
-                provider={ite.Cp}
-                duration={ite.Cd}
-                pricing={ite.Cp}
+                key={ite.link}
+                title={ite.name}
+                content={ite.description}
+                provider={ite.provider}
+                duration={ite.duration}
+                pricing={ite.pricing}
               />
             ))}
           </div>
